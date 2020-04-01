@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace lab4
 {
-    public partial class MyList<T> : IEnumerable<T>
+    public partial class MyList<T> 
     {
         private class Node
         {
@@ -38,40 +38,6 @@ namespace lab4
         }
         public T this[int i] { get => Get(i).value; set => Get(i).value = value; }
 
-        class MyEnumerator : IEnumerator<T>
-        {
-            Node first, current;
-            public MyEnumerator(Node first)
-            {
-                this.first = first = this.current = current = new Node { next = first };
-            }
-            public T Current => this.current.value;
-
-            object IEnumerator.Current => Current;
-
-            public void Dispose()
-            {
-                 
-            }
-            public bool MoveNext()
-            {
-                if (current != null)
-                    current = current.next;
-                return current != null;
-            }
-            public void Reset()
-            {
-                current = first;
-            }
-        }
-        public IEnumerator<T> GetEnumerator()
-        {
-            return new MyEnumerator(first);
-        }
-        IEnumerator IEnumerable.GetEnumerator()
-        {
-            return new MyEnumerator(first);
-        }
         public void RemoveAt(int index)
         {
             var element = Get(index);
@@ -91,7 +57,6 @@ namespace lab4
             }
             Quantity--;
         }
-
         public void Remove(T element) 
         {
             Node e = first;

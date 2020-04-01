@@ -10,41 +10,37 @@ namespace lab4
     {
         static void Main(string[] args)
         {
-            var list = new MyList<Person>
-            {
-                new Person("Jan", "kowalski",12),
-                new Person("Ala", "Nowak", 32),
-                new Person("Maja", "Marchewka", 14),
-                new Person("Jakub", "kowalski",27)
-            };
+            var list = new MyList<Person>();
+
+            list.Add(new Person("Jan", "kowalski", 12));
+            list.Add(new Person("Ala", "Nowak", 32));
+            list.Add(new Person("Maja", "Marchewka", 14));
+            list.Add(new Person("Jakub", "kowalski", 27));
+
             Console.WriteLine("\nAdults:");
             
-            foreach (var e in list)
+            for (int i=0; i<list.Quantity; i++)
             {
-                if (e.Age >= 18)
-                    Console.WriteLine($"\t{e}");
+                if (list[i].Age >= 18)
+                    Console.WriteLine($"\t{list[i]}");
             }
             list.RemoveAt(1);
             Console.WriteLine("\nAdults after remove one person:");
-            
-            foreach (var e in list)
+
+            for (int i = 0; i < list.Quantity; i++)
             {
-                if(e.Age >= 18)
-                Console.WriteLine($"\t{e}");
+                if (list[i].Age >= 18)
+                    Console.WriteLine($"\t{list[i]}");
             }
             list.Insert(1, new Person("Daria", "Wisniewska", 22));
 
             Console.WriteLine("\nAdults after add one person:");
 
-            foreach (var e in list)
+            for (int i = 0; i < list.Quantity; i++)
             {
-                if (e.Age >= 18)
-                    Console.WriteLine($"\t{e}");
+                if (list[i].Age >= 18)
+                    Console.WriteLine($"\t{list[i]}");
             }
-
-            
-            Console.ReadKey();
         }
-
     }
 }
