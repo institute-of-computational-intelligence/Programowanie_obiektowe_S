@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using Lab4.Interfaces;
+
 namespace Lab4.Tasks
 {
     class Task1
