@@ -11,6 +11,8 @@ namespace Lab4
     {
         public TreeNode<T> Root { get; set; }
 
+
+
         public List<T> ToList()
         {
             List<T> list = new List<T>();
