@@ -25,15 +25,15 @@ namespace Lab5
             LastName = lastName;
             DateOfBirth = dateOfBirth;
         }
-        public void DisplayInfo()
+
+        public override string ToString()
         {
-            Console.WriteLine($"{FirstName} ,{LastName} ,{DateOfBirth} ");
+            return $"{FirstName} {LastName}, date of birth: {DateOfBirth}";
         }
 
-        public string ToString()
+        public virtual void DisplayInfo()
         {
-
+            Console.WriteLine(this);
         }
-
     }
 }

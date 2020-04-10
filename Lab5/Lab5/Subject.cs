@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lab5
 {
-    public class Subject :IInfo
+    public class Subject : IInfo
     {
         public int HoursCount { get; set; }
         public string Name { get; set; }
@@ -20,14 +20,15 @@ namespace Lab5
             Semestr = semestr;
             Specialization = specialization;
         }
-        public void DisplayInfo()
+        public virtual void DisplayInfo()
         {
-            Console.WriteLine($"Subject name: {Name} Specialization: {Specialization} Semester: {Semestr} Hours: {HoursCount}");
+            Console.WriteLine(this);
         }
 
-        public string ToString()
+        public override string ToString()
         {
-
+            return $"Subject name: {Name} Specialization: {Specialization} Semester: {Semestr} Hours: {HoursCount}";
         }
+
     }
 }

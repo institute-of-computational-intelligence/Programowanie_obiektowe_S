@@ -24,9 +24,9 @@ namespace Lab5
             Position = position;
         }
 
-        public string ToString()
+        public override string ToString()
         {
-
+            return base.ToString() + $"Title: {AcademicTitle}, position: {Position}";
         }
     }
 }

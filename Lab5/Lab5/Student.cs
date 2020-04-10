@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lab5
 {
-    public class Student :Person
+    public class Student : Person
     {
         public int Group { get; set; }
         public int IndexId { get; set; }
@@ -15,8 +15,8 @@ namespace Lab5
 
         public IList<FinalGrade> Grades;
 
-        public Student(string firstName, string lastName, DateTime dateOfBirth, int group, int indexId, string specialization, int year) 
-                    :base(firstName, lastName, dateOfBirth)
+        public Student(string firstName, string lastName, DateTime dateOfBirth, int group, int indexId, string specialization, int year)
+                    : base(firstName, lastName, dateOfBirth)
         {
             Group = group;
             IndexId = indexId;
@@ -46,13 +46,17 @@ namespace Lab5
 
         public void DisplayGrades()
         {
-
+            foreach (FinalGrade grade in Grades)
+            {
+                Console.WriteLine();
+            }
         }
 
-        public string ToString()
+        public override string ToString()
         {
-
+            return base.ToString() + $"\nSpec: {Specialization}, Year: {Year}, group: {Group}, no index: {IndexId}";
         }
+
 
         public string ToString(bool gradesInfo)
         {

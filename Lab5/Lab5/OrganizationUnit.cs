@@ -36,12 +36,12 @@ namespace Lab5
 
         public void DisplayInfo()
         {
-
+            Console.WriteLine(this);
         }
 
-        public void ToString()
+        public override string ToString()
         {
-
+            return $"Katedra: {Name}, {Address}\n";
         }
 
         public string ToString(bool lecturersInfo)

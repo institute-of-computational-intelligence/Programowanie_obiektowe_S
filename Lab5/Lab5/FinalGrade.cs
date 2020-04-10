@@ -17,14 +17,14 @@ namespace Lab5
             Date = date;
         }
 
-        public void ToString()
+        public override string ToString()
         {
-
+            return $"Date: {Date.ToShortDateString()} Value: {Value}";
         }
 
         public void DisplayInfo()
         {
-            Console.WriteLine($"Date: {Date.ToShortDateString()} Value: {Value}");
+            Console.WriteLine(this);
         }
     }
 }

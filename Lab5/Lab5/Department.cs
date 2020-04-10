@@ -12,6 +12,7 @@ namespace Lab5
         public IList<Student> Students;
         public IList<Subject> Subjects;
         public IList<OrganizationUnit> OrganizationUnits;
+        public Person Dean { get; set; }
 
         public Department()
         {
@@ -60,9 +61,9 @@ namespace Lab5
 
         }
 
-        public string ToString()
+        public override string ToString()
         {
-            
+            return $"Name: {Name}, dean: {Dean}";
         }
 
         //public void UnitsInfo(//[bool lecturerInfo = false])
