@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="Lab06.Animal">
+    <Position X="1.25" Y="1.25" Width="4.25" />
+    <Members>
+      <Field Name="origin" Hidden="true" />
+      <Field Name="species" Hidden="true" />
+      <Field Name="typeOfFood" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>DAAEAAAAAAAAEAAEAAAAAAAAAAAEAAAAAAAAAAgABAA=</HashCode>
+      <FileName>Animal.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Lab06.Bird">
+    <Position X="7.25" Y="4" Width="5.75" />
+    <InheritanceLine Type="Lab06.Animal" FixedFromPoint="true">
+      <Path>
+        <Point X="4.125" Y="3.574" />
+        <Point X="4.125" Y="3.824" />
+        <Point X="10.125" Y="3.824" />
+        <Point X="10.125" Y="4" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAEAAECAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Bird.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab06.Cage" BaseTypeListCollapsed="true">
+    <Position X="1.25" Y="6.75" Width="4" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAkACEAAAAAAACAABAAAgAAAAAgAAAAAA=</HashCode>
+      <FileName>Cage.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.168" />
+  </Class>
+  <Class Name="Lab06.Maintainer">
+    <Position X="5.25" Y="12" Width="5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAUAAAAAAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Maintainer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab06.Mammal">
+    <Position X="7.25" Y="1.25" Width="5.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAEAAAAAAEAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Mammal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab06.Person">
+    <Position X="1.25" Y="12" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAEAAAAAAQABAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Person.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Lab06.Reptile">
+    <Position X="1.25" Y="4.25" Width="5.75" />
+    <InheritanceLine Type="Lab06.Animal" FixedFromPoint="true">
+      <Path>
+        <Point X="4.125" Y="3.574" />
+        <Point X="4.125" Y="4.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAEAAAAAAAAAAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Reptile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab06.Zoo" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="7.25" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAEAQEAgAAAAQEAIQAAAAAAAAEAAAAIAA=</HashCode>
+      <FileName>Zoo.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="Lab06.IInfo" Collapsed="true">
+    <Position X="10.75" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IInfo.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
