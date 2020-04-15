@@ -13,15 +13,16 @@ namespace Lab5
         public string Specialization { get; set; }
         public int Year { get; set; }
 
-        public IList<FinalGrade> Grades;
+        public List<FinalGrade> Grades;
 
-        public Student(string firstName, string lastName, DateTime dateOfBirth, int group, int indexId, string specialization, int year)
+        public Student(string firstName, string lastName, DateTime dateOfBirth, string specialization, int group, int indexId, int year)
                     : base(firstName, lastName, dateOfBirth)
         {
             Group = group;
             IndexId = indexId;
             Specialization = specialization;
             Year = year;
+            Grades = new List<FinalGrade>();
         }
 
         public void AddGrade(FinalGrade grade)
@@ -48,20 +49,26 @@ namespace Lab5
         {
             foreach (FinalGrade grade in Grades)
             {
-                Console.WriteLine();
+                grade.DisplayInfo();
             }
         }
 
-        public override string ToString()
+        //public override string ToString() nie ppotrzebne bo ten niżzej robi to samo plus wiecej
+       // {
+      //      return base.ToString() + $"\nSpec: {Specialization}, Year: {Year}, group: {Group}, no index: {IndexId}";
+      //  }
+
+        public string ToString(bool gradesInfo = false)
         {
-            return base.ToString() + $"\nSpec: {Specialization}, Year: {Year}, group: {Group}, no index: {IndexId}";
+            string str = base.ToString() + $"\nSpec: {Specialization}, Year: {Year}, group: {Group}, no index: {IndexId}";
+            if(gradesInfo == true)
+            {
+                foreach (FinalGrade grade in Grades)
+                {
+                    str += grade.ToString();
+                }
+            }
+            return str;
         }
-
-
-        public string ToString(bool gradesInfo)
-        {
-
-        }
-
     }
 }

@@ -6,18 +6,11 @@ using System.Threading.Tasks;
 
 namespace Lab5
 {
-    public class Person :IInfo
+    public class Person : IInfo
     {
         public DateTime DateOfBirth { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-
-        public Person()
-        {
-            FirstName = "";
-            LastName = "";
-            DateOfBirth = new DateTime();
-        }
 
         public Person(string firstName, string lastName, DateTime dateOfBirth)
         {
@@ -28,12 +21,13 @@ namespace Lab5
 
         public override string ToString()
         {
-            return $"{FirstName} {LastName}, date of birth: {DateOfBirth}";
+            return $"{FirstName} {LastName}, date of birth: {DateOfBirth.ToShortDateString()}";
         }
 
-        public virtual void DisplayInfo()
+        public void DisplayInfo()
         {
             Console.WriteLine(this);
+           // Console.WriteLine("{0:d}",DateOfBirth); <--- dziala jak ToShortDateString()
         }
     }
 }

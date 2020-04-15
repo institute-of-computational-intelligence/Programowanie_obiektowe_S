@@ -6,20 +6,22 @@ using System.Threading.Tasks;
 
 namespace Lab5
 {
-    public class FinalGrade :IInfo
+    public class FinalGrade : IInfo
     {
         public DateTime Date { get; set; }
         public double Value { get; set; }
+        public Subject Subject { get; set; }
 
         public FinalGrade(Subject subject, double value, DateTime date)
         {
+            Subject = subject;
             Value = value;
             Date = date;
         }
 
         public override string ToString()
         {
-            return $"Date: {Date.ToShortDateString()} Value: {Value}";
+            return $"Date: {Date.ToShortDateString()} Value: {Value}\n";
         }
 
         public void DisplayInfo()

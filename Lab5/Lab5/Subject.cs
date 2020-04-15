@@ -20,15 +20,16 @@ namespace Lab5
             Semestr = semestr;
             Specialization = specialization;
         }
-        public virtual void DisplayInfo()
-        {
-            Console.WriteLine(this);
-        }
+        
 
         public override string ToString()
         {
             return $"Subject name: {Name} Specialization: {Specialization} Semester: {Semestr} Hours: {HoursCount}";
         }
 
+        public void DisplayInfo()
+        {
+            Console.WriteLine(this);
+        }
     }
 }
