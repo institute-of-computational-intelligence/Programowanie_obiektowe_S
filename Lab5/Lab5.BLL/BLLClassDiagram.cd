@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="Lab5.BLL.Department">
+    <Position X="12.25" Y="1" Width="7.75" />
+    <AssociationLine Name="Dean" Type="Lab5.BLL.Person" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="12.25" Y="2.72" />
+        <Point X="9.146" Y="2.72" />
+        <Point X="9.146" Y="7.053" />
+        <Point X="8.365" Y="7.053" Type="JumpStart" />
+        <Point X="8.198" Y="7.053" Type="JumpEnd" />
+        <Point X="7.75" Y="7.053" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="3.757" Y="3.907" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="OrganizationUnits" Type="Lab5.BLL.OrganizationUnit">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.11" Y="1.565" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Subjects" Type="Lab5.BLL.Subject">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-2.058" Y="0.552" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Students" Type="Lab5.BLL.Student">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="1.531" Y="0.151" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAIAAEAAAAAAEAAEAAAAAAQAAAAAAAAAAAAiAAAAAAA=</HashCode>
+      <FileName>Department.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Dean" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="OrganizationUnits" />
+      <Property Name="Subjects" />
+      <Property Name="Students" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Lab5.BLL.FinalGrade" BaseTypeListCollapsed="true">
+    <Position X="15.5" Y="9.25" Width="3.75" />
+    <AssociationLine Name="Subject" Type="Lab5.BLL.Subject">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.887" Y="0.893" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAEAIAAAAAAAAAAAAABAAAgAAAAAAA=</HashCode>
+      <FileName>FinalGrade.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Subject" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Lab5.BLL.Lecturer">
+    <Position X="1.25" Y="8.75" Width="6.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAkAAAAAAAAAAAAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>Lecturer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Lab5.BLL.OrganizationUnit" BaseTypeListCollapsed="true">
+    <Position X="9.75" Y="6.5" Width="4.75" />
+    <AssociationLine Name="Lecturers" Type="Lab5.BLL.Lecturer">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="1.208" Y="-0.601" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAEAAEAAAAAAQAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>OrganizationUnit.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Lecturers" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Lab5.BLL.Person">
+    <Position X="3.5" Y="5.75" Width="4.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAEAAEAAAAAAAAAAAQAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Person.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Lab5.BLL.Student">
+    <Position X="1.5" Y="0.5" Width="7.25" />
+    <AssociationLine Name="Grades" Type="Lab5.BLL.FinalGrade">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="7.343" Y="6.528" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>ADAAAEAAAAAAEAAEIABAAAAAAAAAAAAAAAAAAgEAAAA=</HashCode>
+      <FileName>Student.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Grades" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Lab5.BLL.Subject" BaseTypeListCollapsed="true">
+    <Position X="15" Y="5.5" Width="4.75" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAEAAAAAEAAEIAIAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Subject.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
