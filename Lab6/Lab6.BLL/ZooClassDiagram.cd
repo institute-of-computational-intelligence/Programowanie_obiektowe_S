@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="Lab6.BLL.Animal">
+    <Position X="6.75" Y="2.75" Width="4.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAQYAAAAAgAAEAAABAQAAAAAAAAAAAAAAAAgAAEA=</HashCode>
+      <FileName>Animal.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Lab6.BLL.Reptile">
+    <Position X="12.5" Y="4" Width="5.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Reptile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab6.BLL.Mammal">
+    <Position X="0.5" Y="2.75" Width="6" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAABIAAAAAAAAAAAA=</HashCode>
+      <FileName>Mammal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab6.BLL.Bird">
+    <Position X="6.25" Y="7" Width="6.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAEAABAAAAAAAAgAAAIAAABAAAAAAA=</HashCode>
+      <FileName>Bird.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Lab6.BLL.IMovingMethod">
+    <Position X="9.25" Y="0.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IMovingMethod.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Lab6.BLL.IInfo">
+    <Position X="5.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IInfo.cs</FileName>
+      <NewMemberFileName>Iinfo.cs</NewMemberFileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
