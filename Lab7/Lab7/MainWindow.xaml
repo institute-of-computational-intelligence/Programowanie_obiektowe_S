@@ -1,0 +1,34 @@
+﻿<Window x:Class="Lab7.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab7"
+        mc:Ignorable="d"
+        Title="Kalkulator" Height="400" Width="350" ResizeMode="NoResize" FontSize="20" WindowStartupLocation="CenterScreen" Icon="apico.png">
+    <Grid>
+        <TextBox x:Name="InputText" HorizontalAlignment="Left" Height="40" Text="0" VerticalAlignment="Top" Width="335" FontSize="30" BorderBrush="White" TextAlignment="Right" Margin="0,30,0,0" TextChanged="InputText_TextChanged" VerticalContentAlignment="Center" MaxLength="20" MaxLines="1" TextWrapping="WrapWithOverflow"/>
+        <Button x:Name="ClearButton" Content="C" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="10,75,0,0" BorderBrush="White" Background="White" Foreground="Black" FontSize="24" FontWeight="Bold" Height="50" Click="ClearButton_Click"/>
+        <Button x:Name="InverseButton" Content="1/x" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="90,75,0,0" BorderBrush="White" Background="White" Foreground="Black" FontSize="24" FontWeight="Bold" Height="50" Click="InverseButton_Click"/>
+        <Button x:Name="SquareButton" Content="x^2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="170,75,0,0" BorderBrush="White" Background="White" Foreground="Black" FontSize="24" FontWeight="Bold" Height="50" Click="SquareButton_Click"/>
+        <Button x:Name="DividieButton" Content="/" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="250,75,0,0" BorderBrush="White" Background="White" Foreground="Black" FontSize="24" FontWeight="Bold" Height="50" Click="DividieButton_Click"/>
+        <Button x:Name="MultiplyButton" Content="*" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="250,130,0,0" BorderBrush="White" Background="White" Foreground="Black" FontSize="36" FontWeight="Bold" Height="50" Click="MultiplyButton_Click"/>
+        <Button x:Name="SubstractButton" Content="-" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="250,185,0,0" BorderBrush="White" Background="White" Foreground="Black" FontSize="36" FontWeight="Bold" Height="50" Click="SubstractButton_Click"/>
+        <Button x:Name="AdditionButton" Content="+" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="250,240,0,0" BorderBrush="White" Background="White" Foreground="Black" FontSize="36" FontWeight="Bold" Height="50" Click="AdditionButton_Click"/>
+        <Button x:Name="EqualButton" Content="=" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="250,295,0,0" BorderBrush="White" Background="#FFF58686" Foreground="Black" FontSize="36" FontWeight="Bold" Height="50" Click="EqualButton_Click"/>
+        <Button x:Name="Number9" Content="9" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="170,130,0,0" BorderBrush="White" Background="White" Foreground="Black" FontSize="24" FontWeight="Bold" Height="50" Click="Number9_Click"/>
+        <Button x:Name="Number8" Content="8" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="90,130,0,0" BorderBrush="White" Background="White" Foreground="Black" FontSize="24" FontWeight="Bold" Height="50" Click="Number8_Click"/>
+        <Button x:Name="Number7" Content="7" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="10,130,0,0" BorderBrush="White" Background="White" Foreground="Black" FontSize="24" FontWeight="Bold" Height="50" Click="Number7_Click"/>
+        <Button x:Name="Number6" Content="6" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="170,185,0,0" BorderBrush="White" Background="White" Foreground="Black" FontSize="24" FontWeight="Bold" Height="50" Click="Number6_Click"/>
+        <Button x:Name="Number5" Content="5" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="90,185,0,0" BorderBrush="White" Background="White" Foreground="Black" FontSize="24" FontWeight="Bold" Height="50" Click="Number5_Click"/>
+        <Button x:Name="Number4" Content="4" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="10,185,0,0" BorderBrush="White" Background="White" Foreground="Black" FontSize="24" FontWeight="Bold" Height="50" Click="Number4_Click"/>
+        <Button x:Name="Number3" Content="3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="170,240,0,0" BorderBrush="White" Background="White" Foreground="Black" FontSize="24" FontWeight="Bold" Height="50" Click="Number3_Click"/>
+        <Button x:Name="Number2" Content="2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="90,240,0,0" BorderBrush="White" Background="White" Foreground="Black" FontSize="24" FontWeight="Bold" Height="50" Click="Number2_Click"/>
+        <Button x:Name="Number1" Content="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="10,240,0,0" BorderBrush="White" Background="White" Foreground="Black" FontSize="24" FontWeight="Bold" Height="50" Click="Number1_Click"/>
+        <Button x:Name="CommaButton" Content="," HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="170,295,0,0" BorderBrush="White" Background="White" Foreground="Black" FontSize="36" FontWeight="Bold" Height="50" Click="CommaButton_Click"/>
+        <Button x:Name="Number0" Content="0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="90,295,0,0" BorderBrush="White" Background="White" Foreground="Black" FontSize="24" FontWeight="Bold" Height="50" Click="Number0_Click"/>
+        <Button x:Name="SignButton" Content="+/-" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="10,295,0,0" BorderBrush="White" Background="White" Foreground="Black" FontSize="24" FontWeight="Bold" Height="50" Click="SignButton_Click"/>
+        <TextBox x:Name="MemoryText" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="335" BorderBrush="White" MaxLength="20" MaxLines="1" TextAlignment="Right"/>
+
+    </Grid>
+</Window>
