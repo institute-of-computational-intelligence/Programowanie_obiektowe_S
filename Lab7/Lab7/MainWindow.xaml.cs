@@ -25,8 +25,8 @@ namespace Lab7
             InitializeComponent();
         }
 
-        private IList<double> numbers = new List<double>();
-        private IList<char> operators = new List<char>();
+        private readonly IList<double> numbers = new List<double>();
+        private readonly IList<char> operators = new List<char>();
 
         private void InputText_TextChanged(object sender, TextChangedEventArgs e)
         {
@@ -52,8 +52,16 @@ namespace Lab7
             }
             else
             {
-                 MemoryText.Text = (1.0 / Convert.ToDouble(InputText.Text)).ToString();
-                 InputText.Text = (1.0 / Convert.ToDouble(InputText.Text)).ToString();
+                if (CheckLastElement())
+                {
+                    MemoryText.Text = (1.0 / Convert.ToDouble(InputText.Text)).ToString();
+                    InputText.Text = (1.0 / Convert.ToDouble(InputText.Text)).ToString();
+                }
+                else
+                {
+                    InputText.FontSize = 24;
+                    InputText.Text = "Podaj liczbę bez operatora";
+                }
             }
         }
 
@@ -61,8 +69,16 @@ namespace Lab7
         {
             if (InputText.Text.Length < 20)
             {
-                MemoryText.Text = InputText.Text + "*" + InputText.Text + "="; 
-                InputText.Text = Math.Pow(Convert.ToDouble(InputText.Text), 2).ToString();
+                if(CheckLastElement())
+                {
+                    MemoryText.Text = InputText.Text + "*" + InputText.Text + "=";
+                    InputText.Text = Math.Pow(Convert.ToDouble(InputText.Text), 2).ToString();
+                }
+                else
+                {
+                    InputText.FontSize = 24;
+                    InputText.Text = "Podaj liczbę bez operatora";
+                }
             }      
         }
 
@@ -229,37 +245,40 @@ namespace Lab7
 
         private void EqualButton_Click(object sender, RoutedEventArgs e)
         {
-            if(!MemoryText.Text.Contains("="))
-                MemoryText.Text += "=";
-            
-            if (InputText.Text != "")
+            if (numbers.Count != 0)
             {
-                numbers.Add(Convert.ToDouble(InputText.Text));
-                Calculate();
-            } 
-            else if(!CheckLastElement())
-            {
-                numbers.Add(Convert.ToDouble(InputText.Text));
-                Calculate();
-                MemoryText.Text = InputText.Text;
-            }
-            else
-                Calculate();
+                if (!MemoryText.Text.Contains("="))
+                    MemoryText.Text += "=";
 
-          // 
-           numbers.Clear();
-           operators.Clear();
+                if (InputText.Text != "" && !InputText.Text.Contains(',') && InputText.Text != "Podaj liczbę bez operatora")
+                {
+                    numbers.Add(Convert.ToDouble(InputText.Text));
+                    Calculate();
+                }
+                else if (!CheckLastElement())
+                {
+                    numbers.Add(Convert.ToDouble(InputText.Text));
+                    Calculate();
+                    MemoryText.Text = InputText.Text;
+                }
+                else
+                    Calculate();
+
+                // 
+                numbers.Clear();
+                operators.Clear();
+            }
         }
 
         private void Calculate()
         {
-            if (numbers.Count.Equals(1))
+            if (numbers.Count < 1)
                 InputText.Text = numbers.ElementAt(0).ToString();
             else
             {
                 double result = numbers.ElementAt(0);
                 bool DividedByZero = false;
-                for (int i = 0; i < operators.Count; i++)
+                for (int i = 0; i < numbers.Count-1; i++)
                 {
                     switch(operators.ElementAt(i))
                     {
@@ -312,6 +331,8 @@ namespace Lab7
         private void CheckAndSetGoodValue(object sender, RoutedEventArgs e)
         {
             Button button = (Button)sender;
+            if (InputText.Text == "Nie można dzielić przez 0!")
+                InputText.Text = "0";
             if (MemoryText.Text.Contains('='))
             {
                 MemoryText.Text = InputText.Text;
