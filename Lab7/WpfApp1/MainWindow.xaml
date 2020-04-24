@@ -1,0 +1,39 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="394.941" Width="361.647">
+    <Grid HorizontalAlignment="Left" Width="640">
+        <Button x:Name="one" Content="1" HorizontalAlignment="Left" Margin="35,103,0,0" VerticalAlignment="Top" Width="75" Click="One_Click"/>
+        <TextBox x:Name="text" HorizontalAlignment="Left" Height="61" Margin="23,23,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="293" RenderTransformOrigin="0.5,0.5">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.343"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <Button x:Name="two" Content="2"  HorizontalAlignment="Left" Margin="124,103,0,0" VerticalAlignment="Top" Width="75" Click="Two_Click"/>
+        <Button x:Name="three" Content="3"  HorizontalAlignment="Left" Margin="213,103,0,0" VerticalAlignment="Top" Width="75" Click="Three_Click"/>
+        <Button x:Name="four" Content="4" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="35,148,0,0" Click="Four_Click"/>
+        <Button x:Name ="five" Content="5"  HorizontalAlignment="Left" Margin="124,148,0,0" VerticalAlignment="Top" Width="75" Click="Five_Click"/>
+        <Button x:Name="six" Content="6" HorizontalAlignment="Left" Margin="213,148,0,0" VerticalAlignment="Top" Width="75" Click="Six_Click"/>
+        <Button x:Name="seven" Content="7" HorizontalAlignment="Left" Margin="35,187,0,0" VerticalAlignment="Top" Width="75" Click="Seven_Click"/>
+        <Button x:Name="eight" Content="8" HorizontalAlignment="Left" Margin="124,187,0,0" VerticalAlignment="Top" Width="75" Click="Eight_Click"/>
+        <Button x:Name="nine" Content="9" HorizontalAlignment="Left" Margin="213,187,0,0" VerticalAlignment="Top" Width="75" Click="Nine_Click"/>
+        <Button x:Name="cero" Content="0" HorizontalAlignment="Left" Margin="35,225,0,0" VerticalAlignment="Top" Width="75" Click="Cero_Click"/>
+        <Button x:Name="comma" Content="," HorizontalAlignment="Left" Margin="124,225,0,0" VerticalAlignment="Top" Width="75" Click="Comma_Click"/>
+        <Button x:Name="del" Content="C" HorizontalAlignment="Left" Margin="213,225,0,0" VerticalAlignment="Top" Width="75" Click="Del_Click"/>
+        <Button x:Name="equal" Content="=" HorizontalAlignment="Left" Margin="35,263,0,0" VerticalAlignment="Top" Width="75" Click="Equal_Click"/>
+        <Button x:Name="plus" Content="+" HorizontalAlignment="Left" Margin="124,263,0,0" VerticalAlignment="Top" Width="75" Click="Plus_Click"/>
+        <Button x:Name="minus" Content="-" HorizontalAlignment="Left" Margin="213,263,0,0" VerticalAlignment="Top" Width="75" Click="Minus_Click"/>
+        <Button x:Name="mul" Content="*" HorizontalAlignment="Left" Margin="35,299,0,0" VerticalAlignment="Top" Width="75" Click="Mul_Click"/>
+        <Button x:Name="divide" Content="/" HorizontalAlignment="Left" Margin="124,299,0,0" VerticalAlignment="Top" Width="75" Click="Divide_Click"/>
+
+    </Grid>
+</Window>
