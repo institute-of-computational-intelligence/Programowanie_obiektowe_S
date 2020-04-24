@@ -41,7 +41,7 @@ namespace Lab7
 
         private void InverseButton_Click(object sender, RoutedEventArgs e)
         {
-            if (InputText.Text.Equals("0"))
+            if (InputText.Text.Equals("0") || InputText.Text.Equals("0,"))
             {
                 InputText.FontSize = 24;
                 InputText.Text = "Nie można dzielić przez 0!";
@@ -250,7 +250,7 @@ namespace Lab7
                 if (!MemoryText.Text.Contains("="))
                     MemoryText.Text += "=";
 
-                if (InputText.Text != "" && !InputText.Text.Contains(',') && InputText.Text != "Podaj liczbę bez operatora")
+                if (InputText.Text != "" && InputText.Text != "," && InputText.Text != "Podaj liczbę bez operatora")
                 {
                     numbers.Add(Convert.ToDouble(InputText.Text));
                     Calculate();
