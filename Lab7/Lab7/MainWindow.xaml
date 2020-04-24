@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Kalkulator" Height="400" Width="350" ResizeMode="NoResize" FontSize="20" WindowStartupLocation="CenterScreen" Icon="apico.png">
     <Grid>
-        <TextBox x:Name="InputText" HorizontalAlignment="Left" Height="40" Text="0" VerticalAlignment="Top" Width="335" FontSize="30" BorderBrush="White" TextAlignment="Right" Margin="0,30,0,0" TextChanged="InputText_TextChanged" VerticalContentAlignment="Center" MaxLength="20" MaxLines="1" TextWrapping="WrapWithOverflow"/>
+        <TextBox x:Name="InputText" HorizontalAlignment="Left" Height="40" Text="0" VerticalAlignment="Top" Width="335" FontSize="30" BorderBrush="White" TextAlignment="Right" Margin="0,30,0,0" TextChanged="InputText_TextChanged" VerticalContentAlignment="Center" MaxLength="20" MaxLines="1" TextWrapping="WrapWithOverflow" IsEnabled="False" FontWeight="Bold" Foreground="Black"/>
         <Button x:Name="ClearButton" Content="C" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="10,75,0,0" BorderBrush="White" Background="White" Foreground="Black" FontSize="24" FontWeight="Bold" Height="50" Click="ClearButton_Click"/>
         <Button x:Name="InverseButton" Content="1/x" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="90,75,0,0" BorderBrush="White" Background="White" Foreground="Black" FontSize="24" FontWeight="Bold" Height="50" Click="InverseButton_Click"/>
         <Button x:Name="SquareButton" Content="x^2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="170,75,0,0" BorderBrush="White" Background="White" Foreground="Black" FontSize="24" FontWeight="Bold" Height="50" Click="SquareButton_Click"/>
@@ -28,7 +28,7 @@
         <Button x:Name="CommaButton" Content="," HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="170,295,0,0" BorderBrush="White" Background="White" Foreground="Black" FontSize="36" FontWeight="Bold" Height="50" Click="CommaButton_Click"/>
         <Button x:Name="Number0" Content="0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="90,295,0,0" BorderBrush="White" Background="White" Foreground="Black" FontSize="24" FontWeight="Bold" Height="50" Click="Number0_Click"/>
         <Button x:Name="SignButton" Content="+/-" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="10,295,0,0" BorderBrush="White" Background="White" Foreground="Black" FontSize="24" FontWeight="Bold" Height="50" Click="SignButton_Click"/>
-        <TextBox x:Name="MemoryText" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="335" BorderBrush="White" MaxLength="20" MaxLines="1" TextAlignment="Right"/>
+        <TextBox x:Name="MemoryText" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="335" BorderBrush="White" MaxLength="20" MaxLines="1" TextAlignment="Right" IsEnabled="False" FontWeight="Bold"/>
 
     </Grid>
 </Window>

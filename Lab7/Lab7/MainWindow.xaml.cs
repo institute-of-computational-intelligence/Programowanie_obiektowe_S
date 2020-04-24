@@ -86,8 +86,7 @@ namespace Lab7
             CheckZero();
             if (InputText.Text.Length < 20)
             {
-                InputText.Text += "1";
-                MemoryText.Text += "1";
+                CheckDoesHaveEqualAndSetNumbers(sender, e);
             }
 
         }
@@ -97,8 +96,7 @@ namespace Lab7
             CheckZero();
             if (InputText.Text.Length < 20)
             {
-                InputText.Text += "2";
-                MemoryText.Text += "2";
+                CheckDoesHaveEqualAndSetNumbers(sender, e);
             }
 
         }
@@ -108,8 +106,7 @@ namespace Lab7
             CheckZero();
             if (InputText.Text.Length < 20)
             {
-                InputText.Text += "3";
-                MemoryText.Text += "3";
+                CheckDoesHaveEqualAndSetNumbers(sender, e);
             }
         }
 
@@ -118,8 +115,7 @@ namespace Lab7
             CheckZero();
             if (InputText.Text.Length < 20)
             {
-                InputText.Text += "4";
-                MemoryText.Text += "4";
+                CheckDoesHaveEqualAndSetNumbers(sender, e);
             }
         }
 
@@ -128,8 +124,7 @@ namespace Lab7
             CheckZero();
             if (InputText.Text.Length < 20)
             {
-                InputText.Text += "5";
-                MemoryText.Text += "5";
+                CheckDoesHaveEqualAndSetNumbers(sender, e);
             }
         }
 
@@ -138,8 +133,7 @@ namespace Lab7
             CheckZero();
             if (InputText.Text.Length < 20)
             {
-                InputText.Text += "6";
-                MemoryText.Text += "6";
+                CheckDoesHaveEqualAndSetNumbers(sender, e);
             }
         }
 
@@ -148,8 +142,7 @@ namespace Lab7
             CheckZero();
             if (InputText.Text.Length < 20)
             {
-                InputText.Text += "7";
-                MemoryText.Text += "7";
+                CheckDoesHaveEqualAndSetNumbers(sender, e);
             }
         }
 
@@ -158,8 +151,7 @@ namespace Lab7
             CheckZero();
             if (InputText.Text.Length < 20)
             {
-                InputText.Text += "8";
-                MemoryText.Text += "8";
+                CheckDoesHaveEqualAndSetNumbers(sender, e);
             }
         }
 
@@ -168,8 +160,7 @@ namespace Lab7
             CheckZero();
             if (InputText.Text.Length < 20)
             {
-                InputText.Text += "9";
-                MemoryText.Text += "9";
+                CheckDoesHaveEqualAndSetNumbers(sender, e);
             }
         }
 
@@ -178,9 +169,7 @@ namespace Lab7
         {
             if (CheckLastElement())
             {
-                numbers.Add(Convert.ToDouble(InputText.Text));
-                MemoryText.Text += "/";
-                operators.Add('/');
+                CheckAndSetGoodValue(sender, e);
             }
             InputText.Text = null;
         }
@@ -189,9 +178,7 @@ namespace Lab7
         {
             if (CheckLastElement())
             {
-                numbers.Add(Convert.ToDouble(InputText.Text));
-                MemoryText.Text += "*";
-                operators.Add('*');
+                CheckAndSetGoodValue(sender, e);
             }
             InputText.Text = null;
         }
@@ -201,9 +188,7 @@ namespace Lab7
             
             if (CheckLastElement())
             {
-                numbers.Add(Convert.ToDouble(InputText.Text));
-                MemoryText.Text += "-";
-                operators.Add('-');
+                CheckAndSetGoodValue(sender, e);
             }
             InputText.Text = null;
         }
@@ -212,9 +197,7 @@ namespace Lab7
         {
             if (CheckLastElement())
             {
-                numbers.Add(Convert.ToDouble(InputText.Text));
-                MemoryText.Text += "+";
-                operators.Add('+');
+                CheckAndSetGoodValue(sender, e);
             }
             InputText.Text = null;
         }
@@ -231,8 +214,16 @@ namespace Lab7
             if (!InputText.Text.Contains(','))
                 if (InputText.Text.Length < 20)
                 {
-                    InputText.Text += ',';
-                    MemoryText.Text += ',';
+                    if (MemoryText.Text.Contains('='))
+                    {
+                        InputText.Text += ',';
+                        MemoryText.Text = InputText.Text;
+                    }
+                    else
+                    {
+                        InputText.Text += ',';
+                        MemoryText.Text += ',';
+                    }
                 } 
         }
 
@@ -241,15 +232,23 @@ namespace Lab7
             if(!MemoryText.Text.Contains("="))
                 MemoryText.Text += "=";
             
-            if (InputText.Text != null)
+            if (InputText.Text != "")
+            {
                 numbers.Add(Convert.ToDouble(InputText.Text));
+                Calculate();
+            } 
+            else if(!CheckLastElement())
+            {
+                numbers.Add(Convert.ToDouble(InputText.Text));
+                Calculate();
+                MemoryText.Text = InputText.Text;
+            }
+            else
+                Calculate();
 
-            Calculate();
-
-
-
-            numbers.Clear();
-            operators.Clear();
+          // 
+           numbers.Clear();
+           operators.Clear();
         }
 
         private void Calculate()
@@ -309,5 +308,39 @@ namespace Lab7
             }
             return result;
         }
+
+        private void CheckAndSetGoodValue(object sender, RoutedEventArgs e)
+        {
+            Button button = (Button)sender;
+            if (MemoryText.Text.Contains('='))
+            {
+                MemoryText.Text = InputText.Text;
+                MemoryText.Text += button.Content.ToString();
+                numbers.Add(Convert.ToDouble(InputText.Text));
+                operators.Add(button.Content.ToString().ToCharArray().ElementAt(0));
+            }
+            else
+            {
+                MemoryText.Text += button.Content.ToString();
+                numbers.Add(Convert.ToDouble(InputText.Text));
+                operators.Add(button.Content.ToString().ToCharArray().ElementAt(0));
+            }
+        }
+
+        private void CheckDoesHaveEqualAndSetNumbers(object sender, RoutedEventArgs e)
+        {
+            Button button = (Button)sender;
+            InputText.Text += button.Content.ToString();
+            if(!MemoryText.Text.Contains('='))
+            {
+                MemoryText.Text += button.Content.ToString();
+            }
+            else
+            {
+                MemoryText.Text = null;
+                MemoryText.Text += InputText.Text;
+            }
+        }
     }
 }
+
