@@ -176,33 +176,46 @@ namespace Lab7
 
         private void DividieButton_Click(object sender, RoutedEventArgs e)
         {
-            MemoryText.Text += "/";
-            numbers.Add(Convert.ToDouble(InputText.Text));
-            operators.Add('/');
+            if (CheckLastElement())
+            {
+                numbers.Add(Convert.ToDouble(InputText.Text));
+                MemoryText.Text += "/";
+                operators.Add('/');
+            }
             InputText.Text = null;
         }
 
         private void MultiplyButton_Click(object sender, RoutedEventArgs e)
         {
-            MemoryText.Text += "*";
-            numbers.Add(Convert.ToDouble(InputText.Text));
-            operators.Add('*');
+            if (CheckLastElement())
+            {
+                numbers.Add(Convert.ToDouble(InputText.Text));
+                MemoryText.Text += "*";
+                operators.Add('*');
+            }
             InputText.Text = null;
         }
 
         private void SubstractButton_Click(object sender, RoutedEventArgs e)
         {
-            MemoryText.Text += "-";
-            numbers.Add(Convert.ToDouble(InputText.Text));
-            operators.Add('-');
+            
+            if (CheckLastElement())
+            {
+                numbers.Add(Convert.ToDouble(InputText.Text));
+                MemoryText.Text += "-";
+                operators.Add('-');
+            }
             InputText.Text = null;
         }
 
         private void AdditionButton_Click(object sender, RoutedEventArgs e)
         {
-            MemoryText.Text += "+";
-            numbers.Add(Convert.ToDouble(InputText.Text));
-            operators.Add('+');
+            if (CheckLastElement())
+            {
+                numbers.Add(Convert.ToDouble(InputText.Text));
+                MemoryText.Text += "+";
+                operators.Add('+');
+            }
             InputText.Text = null;
         }
 
@@ -232,6 +245,8 @@ namespace Lab7
                 numbers.Add(Convert.ToDouble(InputText.Text));
 
             Calculate();
+
+
 
             numbers.Clear();
             operators.Clear();
@@ -282,6 +297,17 @@ namespace Lab7
                 InputText.Text = null;
                 MemoryText.Text = null;
             }   
+        }
+
+        private bool CheckLastElement()
+        {
+            bool result = false;
+            if (MemoryText.Text.ElementAt(MemoryText.Text.Length - 1) != '*' && MemoryText.Text.ElementAt(MemoryText.Text.Length - 1) != '-' &&
+                MemoryText.Text.ElementAt(MemoryText.Text.Length - 1) != '/' && MemoryText.Text.ElementAt(MemoryText.Text.Length - 1) != '+')
+            {
+                result = true;
+            }
+            return result;
         }
     }
 }
