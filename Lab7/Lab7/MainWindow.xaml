@@ -1,0 +1,48 @@
+﻿<Window x:Class="Lab7.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab7"
+        mc:Ignorable="d"
+        Title="Kalkulator" Height="500" Width="500" FontSize="24" Background="#FF342C2C">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="equationBox" Grid.ColumnSpan="5" HorizontalAlignment="Center" Height="60" VerticalAlignment="Center" Width="470" FontSize="24" FontFamily="Arial" IsUndoEnabled="False" MaxLines="1" AllowDrop="False" Focusable="False" IsTabStop="False" RenderTransformOrigin="0,0" BorderBrush="#FF515151" VerticalContentAlignment="Center" FlowDirection="RightToLeft" IsReadOnly="True" BorderThickness="2" Cursor="Arrow" SelectionBrush="#FF515151"/>
+        <Button x:Name="Button1" Content="1" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Width="80" Height="80" FontFamily="Arial" FontSize="30" Click="Button1_Click"/>
+        <Button x:Name="Button2" Content="2" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Width="80" Height="80" FontFamily="Arial" FontSize="30" Grid.Column="1" Click="Button2_Click"/>
+        <Button x:Name="Button3" Content="3" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Width="80" Height="80" FontFamily="Arial" FontSize="30" Grid.Column="2" Click="Button3_Click"/>
+        <Button x:Name="Button4" Content="4" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" Width="80" Height="80" FontFamily="Arial" FontSize="30" Grid.Column="0" Click="Button4_Click"/>
+        <Button x:Name="Button5" Content="5" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" Width="80" Height="80" FontFamily="Arial" FontSize="30" Grid.Column="1" Click="Button5_Click"/>
+        <Button x:Name="Button6" Content="6" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" Width="80" Height="80" FontFamily="Arial" FontSize="30" Grid.Column="2" Click="Button6_Click"/>
+        <Button x:Name="Button7" Content="7" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" Width="80" Height="80" FontFamily="Arial" FontSize="30" Grid.Column="0" Click="Button7_Click"/>
+        <Button x:Name="Button8" Content="8" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" Width="80" Height="80" FontFamily="Arial" FontSize="30" Grid.Column="1" Click="Button8_Click"/>
+        <Button x:Name="Button9" Content="9" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" Width="80" Height="80" FontFamily="Arial" FontSize="30" Grid.Column="2" Click="Button9_Click"/>
+        <Button x:Name="MinusButton" Content="-" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" Width="80" Height="80" FontFamily="Arial" FontSize="30" Grid.Column="3" Click="MinusButton_Click"/>
+        <Button x:Name="DivideButton" Content="/" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" Width="80" Height="80" FontFamily="Arial" FontSize="30" Grid.Column="4" Click="DivideButton_Click"/>
+        <Button x:Name="MultiplyButton" Content="*" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" Width="80" Height="80" FontFamily="Arial" FontSize="30" Grid.Column="4" Click="MultiplyButton_Click"/>
+        <Button x:Name="ClearButton" Content="C" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Width="80" Height="80" FontFamily="Arial" FontSize="30" Grid.Column="4" Click="ClearButton_Click"/>
+        <Button x:Name="PlusButton" Content="+" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Width="80" Height="174" FontFamily="Arial" FontSize="30" Grid.Column="3" Grid.RowSpan="2" Click="PlusButton_Click"/>
+        <Button x:Name="Button0" Content="0" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center" Width="180" Height="80" FontFamily="Arial" FontSize="30" Grid.Column="1" Grid.ColumnSpan="2" Click="Button0_Click"/>
+        <Button x:Name="PeriodButton" Content="," HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center" Width="80" Height="80" FontFamily="Arial" FontSize="30" Grid.Column="0" Click="PeriodButton_Click"/>
+        <Button x:Name="EqualButton" Content="=" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center" Width="180" Height="80" FontFamily="Arial" FontSize="30" Grid.Column="3" Grid.ColumnSpan="2" Click="EqualButton_Click"/>
+    </Grid>
+    
+    
+    
+</Window>
+
+    
