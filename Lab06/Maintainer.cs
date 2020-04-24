@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace Lab06
 {
-    class Maintainer : Person
+    class Maintainer : Employee, IAction
     {
         public IList<Cage> MaintainedCages { get; }
 
-        public Maintainer(string name, string surname) : base(name, surname)
+        public Maintainer(string name, string surname, DateTime dateOfBirth, DateTime hireDate) : base(name, surname, dateOfBirth, hireDate)
         {
             MaintainedCages = new List<Cage>();
         }
 
-        public Maintainer(string name, string surname, IList<Cage> maintainedCages) : base(name, surname)
+        public Maintainer(string name, string surname, DateTime dateOfBirth, DateTime hireDate, IList<Cage> maintainedCages) : base(name, surname, dateOfBirth, hireDate)
         {
             MaintainedCages = maintainedCages;
         }

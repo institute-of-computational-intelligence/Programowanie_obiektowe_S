@@ -10,7 +10,7 @@ namespace Lab06
     {
         public string NaturalHabitat { get; set; }
 
-        public Mammal(string species, string typeOfFood, string origin, string naturalHabitat) : base(species, typeOfFood, origin)
+        public Mammal(string typeOfFood, int legsCount, string origin, string species, string naturalHabitat) : base(typeOfFood, legsCount, origin, species)
         {
             NaturalHabitat = naturalHabitat;
         }

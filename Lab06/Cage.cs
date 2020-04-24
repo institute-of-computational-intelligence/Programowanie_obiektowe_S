@@ -6,13 +6,14 @@ using System.Threading.Tasks;
 
 namespace Lab06
 {
-    class Cage : IInfo
+    class Cage : IInfo, IAction
     {
         private static int IDs = 0;
         public int Identificator { get; set; }
         public int Capacity { get; private set; }
         public bool IsClean { get; set; } = true;
         public IList<Animal> AnimalsInCage { get; }
+        public Maintainer Maintainer { get; set; }
 
         public Cage(int capacity, bool clean)
         {
@@ -28,6 +29,12 @@ namespace Lab06
             if (capacity > 0 && animal != null)
                 AnimalsInCage.Add(animal);
 
+        }
+
+        public Cage(int capacity, bool clean, IList<Animal> animal, Maintainer maintainer = null) : this(capacity, clean)
+        {
+            AnimalsInCage = animal;
+            Maintainer = maintainer;
         }
 
         public void ResizeCage(int newCapacity)

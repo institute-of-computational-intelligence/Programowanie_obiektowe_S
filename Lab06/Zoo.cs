@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lab06
 {
-    class Zoo : IInfo
+    class Zoo : IInfo, IAction
     {
         public string ZooName { get; set; }
         public IList<Cage> Cages { get; }
@@ -19,15 +19,15 @@ namespace Lab06
             Maintainers = new List<Maintainer>();
         }
 
-        Cage ConstructCage(int capacity)
+        public Cage ConstructCage(int capacity, bool requireCleaning)
         {
-            Cages.Add(new Cage(capacity, true));
+            Cages.Add(new Cage(capacity, requireCleaning));
             return Cages.Last();
         }
 
-        Maintainer HireEmployee(string name, string surname)
+        public Maintainer HireEmployee(string name, string surname, DateTime dateOfBirth)
         {
-            Maintainers.Add(new Maintainer(name, surname));
+            Maintainers.Add(new Maintainer(name, surname, dateOfBirth, DateTime.Now));
             return Maintainers.Last();
         }
 

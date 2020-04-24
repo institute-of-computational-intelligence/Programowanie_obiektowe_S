@@ -6,21 +6,25 @@ using System.Threading.Tasks;
 
 namespace Lab06
 {
-    class Person : IInfo
+    class Employee : IInfo
     {
 
         public string Name { get; set; }
         public string Surname { get; set; }
+        public DateTime DateOfBirth { get; protected set; }
+        public DateTime HireDate { get; protected set; }
 
-        public Person(string name, string surname)
+        public Employee(string name, string surname, DateTime dateOfBirth, DateTime hireDate)
         {
             Name = name;
             Surname = surname;
+            DateOfBirth = dateOfBirth;
+            HireDate = hireDate;
         }
 
         public override string ToString()
         {
-            return $"Person: {Name} {Surname}";
+            return $"Employee: {Name} {Surname}";
         }
 
         public void DisplayInfo()

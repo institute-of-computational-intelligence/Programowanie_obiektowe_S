@@ -43,13 +43,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActionExtensions.cs" />
     <Compile Include="Animal.cs" />
     <Compile Include="Bird.cs" />
     <Compile Include="Cage.cs" />
+    <Compile Include="IAction.cs" />
     <Compile Include="IInfo.cs" />
     <Compile Include="Maintainer.cs" />
     <Compile Include="Mammal.cs" />
-    <Compile Include="Person.cs" />
+    <Compile Include="Employee.cs" />
+    <Compile Include="PrintActionExtensions.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reptile.cs" />
@@ -60,6 +63,9 @@
     <None Include="ClassDiagram1.cd" />
     <None Include="ClassDiagram2.cd" />
     <None Include="ClassDiagram3.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Diagram.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

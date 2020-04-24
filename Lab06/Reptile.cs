@@ -10,7 +10,7 @@ namespace Lab06
     {
         public bool Venomous { get; set; }
 
-        public Reptile(string species, string typeOfFood, string origin, bool venomous) : base(species, typeOfFood, origin)
+        public Reptile(string species, int legsCount, string typeOfFood, string origin, bool venomous) : base(typeOfFood, legsCount, origin, species)
         {
             Venomous = venomous;
         }

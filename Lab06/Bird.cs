@@ -11,7 +11,7 @@ namespace Lab06
         public double Wingspan { get; set; }
         public double Endurance { get; set; }
 
-        public Bird(string species, string typeOfFood, string origin, double wingspan, double endurance) : base(species, typeOfFood, origin)
+        public Bird(string species, int legsCount, string typeOfFood, string origin, double wingspan, double endurance) : base(typeOfFood, legsCount, origin, species)
         {
             Wingspan = wingspan;
             Endurance = endurance;

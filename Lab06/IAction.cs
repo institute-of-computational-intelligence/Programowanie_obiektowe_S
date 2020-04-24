@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lab06
 {
-    public interface IInfo
+    public interface IAction
     {
-        void DisplayInfo();
     }
 }
