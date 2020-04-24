@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace lab6
 {
-    class IAction
+    public interface IAction
     {
     }
 }

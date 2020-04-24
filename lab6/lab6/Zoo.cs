@@ -30,5 +30,14 @@ namespace lab6
         {
             throw new NotImplementedException();
         }
+        public Cage BuildCage(int id, bool dirty)
+        { } 
+
+        public void HireEmployee(string name, string firstname, DateTime date)
+        { }
+        public void ExpandCage(Cage cage,int nr)
+        {
+
+        }
     }
 }

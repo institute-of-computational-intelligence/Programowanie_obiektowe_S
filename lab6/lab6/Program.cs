@@ -49,7 +49,7 @@ namespace lab6
             employee1,
             employee2
             });
-            Animal cobra = new Reptile("flesh", 0, "Africa", "Serpentes", true);
+            Animal cobra = new Reptiles("flesh", 0, "Africa", "Serpentes", true);
             Cage cage4 = zoo.BuildCage(10, false);
             var newEmploee = zoo.HireEmployee("Robert", "Kowalczyk", new DateTime(1988, 1, 1));
             ((CageSupervisor)newEmploee).Set<Cage, CageSupervisor>().Add(cage4);
