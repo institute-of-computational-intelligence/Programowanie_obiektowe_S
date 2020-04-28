@@ -1,0 +1,24 @@
+﻿<Window x:Class="Lab7.Calculator"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab7"
+        mc:Ignorable="d"
+        Title="Calculator" Height="275.213" Width="248.293">
+    <Grid>
+        <Canvas x:Name="canvas_numbers" HorizontalAlignment="Left" Height="206" Margin="10,30,0,0" VerticalAlignment="Top" Width="121">
+            <local:NumberButton x:Name="b_delimiter" Content="," HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" RenderTransformOrigin="0.454,0.487" Canvas.Left="39" Canvas.Top="166" Click="NumbersButtonClick" />
+        </Canvas>
+        <Canvas x:Name="canvas_operations" Canvas.Left="137" Canvas.Top="7" Width="83" Margin="149,30,0,9.6">
+            <local:OperationButton x:Name="b_operationPlus" Content="+" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="65" Canvas.Left="10" Canvas.Top="10" Click="OperationsButtonClick" OperationChar="+"/>
+            <local:OperationButton  x:Name="b_operationCancel" Content="C" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Canvas.Left="45" Canvas.Top="10" RenderTransformOrigin="-0.834,0.617" Click="B_operationCancel_Click"  OperationChar="C"/>
+            <local:OperationButton  x:Name="b_operationMultiply" Content="*" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Canvas.Left="45" Canvas.Top="45" RenderTransformOrigin="-0.834,0.617" Click="OperationsButtonClick"  OperationChar="*"/>
+            <local:OperationButton  x:Name="b_operationSubstract" Content="-" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Canvas.Left="10" Canvas.Top="80" RenderTransformOrigin="-0.834,0.617" Click="OperationsButtonClick"  OperationChar="-"/>
+            <local:OperationButton  x:Name="b_operationDivide" Content="/" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Canvas.Left="45" Canvas.Top="80" RenderTransformOrigin="-0.834,0.617" Click="OperationsButtonClick"  OperationChar="/"/>
+            <local:OperationButton  x:Name="b_operationEquals" Content="=" HorizontalAlignment="Left" VerticalAlignment="Top" Width="65" Height="30" Canvas.Left="10" Canvas.Top="115" RenderTransformOrigin="-0.834,0.617" Click="OperationsButtonClick"  OperationChar="="/>
+        </Canvas>
+        <TextBox x:Name="textBox_Result" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="18" Margin="12,7,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="212" TextAlignment="Right" TextChanged="TextBox_Result_TextChanged"/>
+
+    </Grid>
+</Window>
