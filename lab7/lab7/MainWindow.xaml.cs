@@ -120,12 +120,7 @@ namespace lab7
         private void sub_Click(object sender, RoutedEventArgs e)
         {
 
-            if (TextBox.Text == null)
-            {
-                x = -(Convert.ToDouble(TextBox.Text));
-
-            }
-            else {
+            
                 z = x;
                 if (z == 0)
                 {
@@ -140,7 +135,7 @@ namespace lab7
                 TextBox.Text = null;
                 dzialanie = "sub";
 
-            }
+            
         }
 
         private void mul_Click(object sender, RoutedEventArgs e)

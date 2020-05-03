@@ -23,6 +23,7 @@
             <RowDefinition Height="55" />
 
         </Grid.RowDefinitions>
+        <TextBox x:Name="TextBox" Grid.ColumnSpan="5" HorizontalAlignment="Left" Height="50" TextWrapping="Wrap"  VerticalAlignment="Top" Width="275" TextChanged="TextBox_TextChanged" TextAlignment="Right"/>
         <Button Content="1" Name="one" Grid.Column="0" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Top" Width="50" Height="50" Grid.ColumnSpan="1" FontSize="24" Click="one_Click"/>
         <Button Content="2" Name="two" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Top" Width="50" Height="50" Grid.ColumnSpan="1" FontSize="24" Click="two_Click"/>
         <Button Content="3" Name="three" Grid.Column="2" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Top" Width="50" Height="50" Grid.ColumnSpan="1" FontSize="24" Click="three_Click"/>
@@ -40,7 +41,6 @@
         <Button Content="," Name="dot" Grid.Column="0" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Top" Width="50" Height="50" Grid.ColumnSpan="1" FontSize="24" Click="dot_Click"/>
         <Button Content="0" Name="zero" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Top" Width="105" Height="50" Grid.ColumnSpan="2" FontSize="24" Click="zero_Click"/>
         <Button Content="=" Name="equal"  Grid.Column="3" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Top" Width="105" Height="50" Grid.ColumnSpan="2" FontSize="24" Click="equal_Click"/>
-        <TextBox x:Name="TextBox" Grid.ColumnSpan="5" HorizontalAlignment="Left" Height="50" TextWrapping="Wrap"  VerticalAlignment="Top" Width="275" TextChanged="TextBox_TextChanged" TextAlignment="Right"/>
 
     </Grid>
 </Window>
