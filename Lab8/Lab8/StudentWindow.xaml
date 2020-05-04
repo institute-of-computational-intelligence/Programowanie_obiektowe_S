@@ -1,0 +1,21 @@
+﻿<Window x:Class="Lab8.StudentWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab8"
+        mc:Ignorable="d"
+        Title="Student Edit" Height="270" Width="415" FontSize="18" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <TextBox x:Name="FirstName" Height="34" Margin="132,29,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="265" HorizontalAlignment="Left" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="Surname" HorizontalAlignment="Left" Height="34" Margin="132,68,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="265" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="IndexNumber" HorizontalAlignment="Left" Height="34" Margin="132,107,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="265" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="Faculty" HorizontalAlignment="Left" Height="34" Margin="132,146,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="265" VerticalContentAlignment="Center"/>
+        <Button x:Name="OkButton" Content="Ok" HorizontalAlignment="Left" Margin="286,198,0,0" VerticalAlignment="Top" Width="111" Click="OkButton_Click"/>
+        <Label x:Name="FirstNameLabel" Content="Imię" HorizontalAlignment="Left" Margin="83,29,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.259,-0.169" FontSize="18"/>
+        <Label x:Name="FirstNameLabel_Copy" Content="Nazwisko" HorizontalAlignment="Left" Margin="42,68,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.259,-0.169" FontSize="18"/>
+        <Label x:Name="FirstNameLabel_Copy1" Content="Nr Indeksu" HorizontalAlignment="Left" Margin="31,107,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.259,-0.169" FontSize="18"/>
+        <Label x:Name="FirstNameLabel_Copy2" Content="Wydział" HorizontalAlignment="Left" Margin="54,146,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.259,-0.169" FontSize="18"/>
+
+    </Grid>
+</Window>
