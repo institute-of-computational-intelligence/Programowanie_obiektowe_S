@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lab6
 {
-    public abstract class Animal
+    public abstract class Animal: IInfo
     {
         private string species;
         private int food;
@@ -33,6 +33,11 @@ namespace Lab6
         public override string ToString()
         {
             return $"Zwierze: {species}, podrzad: {suborder} rodz. pozywienia: {food}";
+        }
+
+        public virtual void DisplayInfo()
+        {
+            throw new NotImplementedException();
         }
     }
 }
