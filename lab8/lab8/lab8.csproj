@@ -55,6 +55,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AddGrades.xaml.cs">
+      <DependentUpon>AddGrades.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Grades.cs" />
     <Compile Include="GradesWindow.xaml.cs">
       <DependentUpon>GradesWindow.xaml</DependentUpon>
@@ -63,6 +66,10 @@
     <Compile Include="StudentWindow.xaml.cs">
       <DependentUpon>StudentWindow.xaml</DependentUpon>
     </Compile>
+    <Page Include="AddGrades.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="GradesWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

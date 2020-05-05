@@ -13,6 +13,5 @@ namespace lab8
         public int Index { get; set; }
         public string Faculty { get; set; }
 
-        
     }
 }

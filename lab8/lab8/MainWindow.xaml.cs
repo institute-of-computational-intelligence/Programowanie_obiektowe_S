@@ -21,6 +21,7 @@ namespace lab8
     public partial class MainWindow : Window
     {
         public List<Student> list { get; set; }
+        public Student s;
         public MainWindow()
         {
             list = new List<Student>()
@@ -62,7 +63,11 @@ namespace lab8
         {
             var dialog = new GradesWindow();
             if(dg.SelectedItem is Student)
+            {
                 dialog.ShowDialog();
+
+           
+            }
             
            
 

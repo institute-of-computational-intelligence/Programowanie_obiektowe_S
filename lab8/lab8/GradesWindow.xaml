@@ -8,6 +8,7 @@
         Title="GradesWindow" Height="450" Width="800">
     <Grid>
         <DataGrid HorizontalAlignment="Left" Height="300" Margin="50,90,0,0" VerticalAlignment="Top" Width="700" Name="t"/>
+        <Button Content="AddGrades" Name="AddGrades" HorizontalAlignment="Left" Margin="634,52,0,0" VerticalAlignment="Top" Width="75" Click="AddGrades_Click"/>
 
 
     </Grid>

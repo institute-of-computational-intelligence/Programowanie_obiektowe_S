@@ -25,17 +25,28 @@ namespace lab8
                 grade = new List<Grades>()
             {
                 new Grades(){Subject="programowanie", Grade=4, Index=1033},
-                new Grades(){Subject="programowanie", Grade=5, Index=1021}
+                new Grades(){Subject="prograwanie", Grade=5, Index=1021}
             };
-                InitializeComponent(); 
+           
+            List<Grades> found = grade.FindAll(oElement => oElement.Index.Equals(1021));
+            InitializeComponent(); 
             t.Columns.Add(new DataGridTextColumn() { Header = "Przedmiot", Binding = new Binding("Subject") });
             t.Columns.Add(new DataGridTextColumn() { Header = "Ocena", Binding = new Binding("Grade") });
-
-           
+            
             t.AutoGenerateColumns = false;
             t.ItemsSource = grade;
+
             
-            
+        }
+
+        private void AddGrades_Click(object sender, RoutedEventArgs e)
+        {
+            var dialog = new AddGrades();
+            if (dialog.ShowDialog() == true)
+            {
+                grade.Add(dialog.grades);
+                t.Items.Refresh();
+            }
         }
     }
 }

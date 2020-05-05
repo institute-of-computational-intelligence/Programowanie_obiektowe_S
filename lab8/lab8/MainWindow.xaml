@@ -9,7 +9,7 @@
     <Grid>
         <Button Content="AddStudent" HorizontalAlignment="Left" Margin="30,40,0,0" VerticalAlignment="Top" Width="100" Name="add" Click="add_Click"/>
         <Button Content="RemoveStudent" HorizontalAlignment="Left" Margin="150,40,0,0" VerticalAlignment="Top" Width="100" Name="remove" Click="remove_Click"/>
-        <DataGrid HorizontalAlignment="Left" Height="100" Margin="30,100,0,0" VerticalAlignment="Top" Width="600" Name="dg"/>
+        <DataGrid x:FieldModifier="public" HorizontalAlignment="Left" Height="100" Margin="30,100,0,0" VerticalAlignment="Top" Width="600" Name="dg"/>
         <Button Content="ViewGrades" HorizontalAlignment="Left" Margin="565,222,0,0" VerticalAlignment="Top" Width="75" Name="grades" Click="grades_Click"/>
 
 

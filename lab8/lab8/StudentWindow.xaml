@@ -9,7 +9,7 @@
     <Grid>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="150,20,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="220" Name="tbName"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="150,50,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="220" Name="tbSurname"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="150,80,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="220" Name="tbIndex"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="150,80,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="220" Name="tbIndex" />
         <TextBox HorizontalAlignment="Left" Height="23" Margin="150,110,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="220" Name="tbFaculty"/>
         <TextBlock HorizontalAlignment="Left" Margin="90,25,0,0" TextWrapping="Wrap" Text="Imię" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="90,55,0,0" TextWrapping="Wrap" Text="Nazwisko" VerticalAlignment="Top"/>
