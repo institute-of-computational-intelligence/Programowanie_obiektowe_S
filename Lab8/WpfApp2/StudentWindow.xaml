@@ -1,0 +1,21 @@
+﻿<Window x:Class="WpfApp2.StudentWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2"
+        mc:Ignorable="d"
+        Title="StudentWindow" Height="450" Width="800">
+    <Grid>
+        <Label x:Name="NameLabel" Content="Imie" HorizontalAlignment="Left" Margin="93,73,0,0" VerticalAlignment="Top" Width="124" Height="47" FontSize="20"/>
+        <Label x:Name="SurnameLabel" Content="Naziwsko" HorizontalAlignment="Left" Margin="93,125,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.283,-0.792" Width="93" FontSize="18"/>
+        <Label x:Name="IndexLabel" Content="Nr indeksu" HorizontalAlignment="Left" Margin="93,167,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <Label x:Name="DepartmentLabel" Content="Wydzial" HorizontalAlignment="Left" Margin="93,218,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <TextBox x:Name="Name" HorizontalAlignment="Left" Height="23" Margin="217,84,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="Surname" HorizontalAlignment="Left" Height="23" Margin="217,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="NoIndex" HorizontalAlignment="Left" Height="23" Margin="217,167,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="Department" HorizontalAlignment="Left" Height="23" Margin="217,229,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="OkButton" Content="OK" HorizontalAlignment="Left" Margin="355,289,0,0" VerticalAlignment="Top" Width="75" Click="OkButton_Click"/>
+
+    </Grid>
+</Window>
