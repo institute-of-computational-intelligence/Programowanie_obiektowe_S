@@ -76,30 +76,42 @@ namespace lab7
 
         private void ButtonAdd_Click(object sender, RoutedEventArgs e)
         {
-            Numbers.Add(Convert.ToDouble(Equation.Text));
-            Operators.Add("+");
-            Equation.Text = null;
+            if(Equation.Text != null)
+            {
+                Numbers.Add(Convert.ToDouble(Equation.Text));
+                Operators.Add("+");
+                Equation.Text = null;
+            }
         }
 
         private void ButtonSubtract_Click(object sender, RoutedEventArgs e)
         {
-            Numbers.Add(Convert.ToDouble(Equation.Text));
-            Operators.Add("-");
-            Equation.Text = null;
+            if(Equation.Text != null)
+            {
+                Numbers.Add(Convert.ToDouble(Equation.Text));
+                Operators.Add("-");
+                Equation.Text = null;
+            }
         }
 
         private void ButtonMultiply_Click(object sender, RoutedEventArgs e)
         {
-            Numbers.Add(Convert.ToDouble(Equation.Text));
-            Operators.Add("*");
-            Equation.Text = null;
+            if (Equation.Text != null)
+            {
+                Numbers.Add(Convert.ToDouble(Equation.Text));
+                Operators.Add("*");
+                Equation.Text = null;
+            }
         }
 
         private void ButtonDivide_Click(object sender, RoutedEventArgs e)
         {
-            Numbers.Add(Convert.ToDouble(Equation.Text));
-            Operators.Add("/");
-            Equation.Text = null;
+            if(Equation.Text != null)
+            {
+                Numbers.Add(Convert.ToDouble(Equation.Text));
+                Operators.Add("/");
+                Equation.Text = null;
+            }
         }
 
         private void ButtonClear_Click(object sender, RoutedEventArgs e)
