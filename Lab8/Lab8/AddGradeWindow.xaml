@@ -1,0 +1,26 @@
+﻿<Window x:Class="Lab8.AddGradeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab8"
+        mc:Ignorable="d"
+        Title="AddGradeWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label x:Name="SubjectLabel" Content="Subject" Margin="0" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Padding="0,0,15,0" FontSize="22" FontFamily="Arial"/>
+        <Label x:Name="GradeLabel" Content="Grade" Margin="0" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Padding="0,0,15,0" FontSize="22" FontFamily="Arial" Grid.Row="1"/>
+        <TextBox x:Name="SubjectInputBox" Grid.Column="1" Margin="15,40" TextWrapping="Wrap" VerticalContentAlignment="Center" Padding="10,0,0,0" FontSize="22" FontFamily="Arial"/>
+        <TextBox x:Name="GradeInputBox" Grid.Column="2" Margin="15,40" TextWrapping="Wrap" VerticalContentAlignment="Center" Padding="10,0,0,0" FontSize="22" FontFamily="Arial" Grid.Row="1"/>
+        <Button x:Name="GradeOkButton" Content="Ok" HorizontalAlignment="Right" Margin="0,30,18,30" Grid.Row="2" Width="176" Grid.Column="1" FontFamily="Arial" FontSize="22" Click="GradeOkButton_Click"/>
+
+    </Grid>
+</Window>

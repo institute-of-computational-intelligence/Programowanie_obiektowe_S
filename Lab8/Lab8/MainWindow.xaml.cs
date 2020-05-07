@@ -61,5 +61,14 @@ namespace Lab8
                 StudentDataGrid.Items.Refresh();
             }
         }
+
+        private void ViewGradesButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (StudentDataGrid.SelectedItem is Student)
+            {
+                var dialog = new GradesWindow(((Student)StudentDataGrid.SelectedItem).Grades);
+                dialog.ShowDialog();
+            }
+        }
     }
 }

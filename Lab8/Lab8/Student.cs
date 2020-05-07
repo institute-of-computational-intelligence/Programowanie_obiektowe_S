@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Lab8
 {
@@ -8,9 +9,12 @@ namespace Lab8
         public string Surname { get; set; }
         public string Faculty { get; set; }
         public int IndexNo { get; set; }
+        public List<Grade> Grades { get; set; }
 
         public Student()
-        { }
+        {
+            Grades = new List<Grade>();
+        }
 
         public Student(string name, string surname, int indexNo, string faculty)
         {
@@ -18,6 +22,7 @@ namespace Lab8
             Surname = surname;
             IndexNo = indexNo;
             Faculty = faculty;
+            Grades = new List<Grade>();
         }
     }
 }

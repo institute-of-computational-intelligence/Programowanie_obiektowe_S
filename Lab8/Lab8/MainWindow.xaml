@@ -14,6 +14,7 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
+                <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="50"/>
@@ -21,7 +22,8 @@
             </Grid.RowDefinitions>
             <Button x:Name="AddStudentButton" Content="Add student" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" Width="170" Height="40" FontSize="20" FontFamily="Arial" Click="AddStudentButton_Click"/>
             <Button x:Name="RemoveStudentButton" Content="Remove student" Grid.Column="1" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" Width="170" Height="40" HorizontalContentAlignment="Center" FontFamily="Arial" FontSize="20" Click="RemoveStudentButton_Click"/>
-            <DataGrid x:Name="StudentDataGrid" Margin="0" Grid.Row="1" Grid.ColumnSpan="2" />
+            <DataGrid x:Name="StudentDataGrid" Margin="0" Grid.Row="1" Grid.ColumnSpan="3" />
+            <Button x:Name="ViewGradesButton" Content="View Grades" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" Width="170" Height="40" HorizontalContentAlignment="Center" FontFamily="Arial" FontSize="20" Grid.Column="2" Click="ViewGradesButton_Click"/>
         </Grid>
 
     </Grid>
