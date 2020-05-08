@@ -33,13 +33,14 @@ namespace Lab8
 
             InitializeComponent();
 
+            StudentDataGrid.AutoGenerateColumns = false;
+            StudentDataGrid.ItemsSource = Students;
+            
             StudentDataGrid.Columns.Add(new DataGridTextColumn() { Header = "Imię", Binding = new Binding("Name") });
             StudentDataGrid.Columns.Add(new DataGridTextColumn() { Header = "Nazwisko", Binding = new Binding("Surname") });
             StudentDataGrid.Columns.Add(new DataGridTextColumn() { Header = "Nr Indeksu", Binding = new Binding("IndexNo") });
             StudentDataGrid.Columns.Add(new DataGridTextColumn() { Header = "Wydział", Binding = new Binding("Faculty") });
 
-            StudentDataGrid.AutoGenerateColumns = false;
-            StudentDataGrid.ItemsSource = Students;
         }
 
         private void AddStudentButton_Click(object sender, RoutedEventArgs e)
