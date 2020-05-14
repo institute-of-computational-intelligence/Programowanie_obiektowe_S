@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<Student xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Janusz</Name>
+  <Surname>Kowalski</Surname>
+  <Faculty>WIMiI</Faculty>
+  <IndexNumber>18621</IndexNumber>
+</Student><?xml version="1.0"?>
+<Student xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Andrzej</Name>
+  <Surname>Nowak</Surname>
+  <Faculty>WIMiI</Faculty>
+  <IndexNumber>13528</IndexNumber>
+</Student><?xml version="1.0"?>
+<Student xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>John</Name>
+  <Surname>Doe</Surname>
+  <Faculty>WIMiI</Faculty>
+  <IndexNumber>16322</IndexNumber>
+</Student>
