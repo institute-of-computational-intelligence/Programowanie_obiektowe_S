@@ -14,6 +14,8 @@ namespace WpfApp2
         public int NoIndex { get; set; }
         public string Department  { get; set; }
         public List <Grade> Grades { get; set; }
+
+        
         public Student(string name, string surname, int noIndex, string department)
         {
             Name = name;
@@ -25,13 +27,10 @@ namespace WpfApp2
 
         public Student()
         {
-            Name = "";
-            Surname = "";
-            NoIndex = 0;
-            Department = "";
             Grades = new List<Grade>();
 
         }
-   
+       
+
     }
 }

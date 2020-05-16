@@ -18,7 +18,7 @@ namespace WpfApp2
 
     public partial class StudentWindow : Window
     {
-        public Student student;
+        public Student Student;
         
         public StudentWindow(Student student = null)
         {
@@ -31,23 +31,23 @@ namespace WpfApp2
                 NoIndex.Text = student.NoIndex.ToString();
                 Department.Text = student.Department;
             }
-            this.student = student ?? new Student();
+            this.Student = student ?? new Student();
         }
 
         private void OkButton_Click(object sender, RoutedEventArgs e)
         {
             if (!Regex.IsMatch(Name.Text, @"^\p{Lu}\p{Ll}{1,12}$") ||
                 !Regex.IsMatch(Surname.Text, @"^\p{Lu}\p{Ll}{1,12}$") ||
-                !Regex.IsMatch(Department.Text, @"^\p{Lu}\p{Ll}{1,12}$") ||
+                !Regex.IsMatch(Department.Text, @"^\p{Lu}\p{L}{1,12}$") ||
                  !Regex.IsMatch(NoIndex.Text, @"^[0-9]{4,10}$"))
             {
                 MessageBox.Show("Nie poprawne dane");
                 return;
             }
-            student.Name = Name.Text;
-            student.Surname = Surname.Text;
-            student.NoIndex = int.Parse(NoIndex.Text);
-            student.Department = Department.Text;
+            Student.Name = Name.Text;
+            Student.Surname = Surname.Text;
+            Student.NoIndex = int.Parse(NoIndex.Text);
+            Student.Department = Department.Text;
             this.DialogResult = true;
         }
     }

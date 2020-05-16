@@ -19,6 +19,8 @@ namespace WpfApp2
     public partial class MainWindow : Window
     {
         public List<Student>Students {get; set;}
+        
+
         public MainWindow()
         {
             Students = new List<Student>()
@@ -50,7 +52,7 @@ namespace WpfApp2
             var dialog = new StudentWindow();
             if(dialog.ShowDialog()==true)
             {
-                Students.Add(dialog.student);
+                Students.Add(dialog.Student);
                 dg.Items.Refresh();
             }
         }
@@ -62,14 +64,27 @@ namespace WpfApp2
             dg.Items.Refresh();
         }
 
-        private void AddGarde_Click(object sender, RoutedEventArgs e)
+        private void ShowGradesButton_Click(object sender, RoutedEventArgs e)
         {
-
+            if (dg.SelectedItem is Student)
+            {
+                var dialog = new Grades(((Student)dg.SelectedItem).Grades);
+                dialog.ShowDialog();
+            }
         }
 
-        private void ShowGrades_Click(object sender, RoutedEventArgs e)
-        {
 
-        }
+
+        /*   private void ShowGrades_Click(object sender, RoutedEventArgs e) //
+           {
+
+               if (dg.SelectedItem is Student)
+               {
+                   var dialog = new GradesWindow(((Student)dg.SelectedItem).Grades);
+                   dialog.ShowDialog();
+               }
+           }*/
+
+
     }
 }

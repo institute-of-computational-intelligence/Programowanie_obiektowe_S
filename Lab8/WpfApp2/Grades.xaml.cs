@@ -15,15 +15,15 @@ using System.Windows.Shapes;
 namespace WpfApp2
 {
     /// <summary>
-    /// Interaction logic for GradeWindow.xaml
+    /// Interaction logic for Grades.xaml
     /// </summary>
-    public partial class GradesWindow : Window
+    public partial class Grades : Window
     {
-        List<Grade> _grades;
-        public GradesWindow(List<Grade> grades)
+        private List<Grade> _grades;
+
+        public Grades(List<Grade> grades)
         {
             InitializeComponent();
-
             _grades = grades;
 
             dg.Columns.Add(new DataGridTextColumn() { Header = "Przedmiot", Binding = new Binding("Subject") });
@@ -31,11 +31,6 @@ namespace WpfApp2
 
             dg.AutoGenerateColumns = false;
             dg.ItemsSource = grades;
-        }
-        
-            private void Grades_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
         }
 
         private void AddGrade_Click(object sender, RoutedEventArgs e)
@@ -58,7 +53,7 @@ namespace WpfApp2
             }
         }
 
-        private void Back_Click(object sender, RoutedEventArgs e)
+        private void BackButton_Click(object sender, RoutedEventArgs e)
         {
             DialogResult = true;
         }

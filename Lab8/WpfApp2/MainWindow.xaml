@@ -10,8 +10,7 @@
         <Button x:Name="AddButton" Content="Add Student" HorizontalAlignment="Left" Margin="24,30,0,0" VerticalAlignment="Top" Width="100" Click="AddButton_Click"/>
         <Button x:Name="RemoveButton" Content="Remove Student" HorizontalAlignment="Left" Margin="142,30,0,0" VerticalAlignment="Top" Width="100" Click="RemoveButton_Click"/>
         <DataGrid x:Name="dg" HorizontalAlignment="Left" Height="314" Margin="24,78,0,0" VerticalAlignment="Top" Width="719"/>
-        <Button x:Name="AddGarde" Content="Add Grade" HorizontalAlignment="Left" Margin="269,30,0,0" VerticalAlignment="Top" Width="100" RenderTransformOrigin="-0.624,-0.706" Click="AddGarde_Click"/>
-        <Button x:Name="ShowGrades" Content="Show Grades" HorizontalAlignment="Left" Margin="400,30,0,0" VerticalAlignment="Top" Width="100" Click="ShowGrades_Click"/>
+        <Button x:Name="ShowGradesButton" Content="ShowGrades" HorizontalAlignment="Left" Margin="282,30,0,0" VerticalAlignment="Top" Width="75" Click="ShowGradesButton_Click"/>
 
     </Grid>
 </Window>
