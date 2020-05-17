@@ -1,0 +1,20 @@
+﻿<Window x:Class="Lab10.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab10"
+        mc:Ignorable="d"
+        Title="Laboratorium 10" Height="450" Width="800">
+    <Grid>
+        <DataGrid x:Name="dg" HorizontalAlignment="Left" Height="290" VerticalAlignment="Top" Width="772" Margin="10,119,0,0" SelectionChanged="dg_SelectionChanged"/>
+        <Button x:Name="connectionButton" Content="Wyświetl właścicieli" HorizontalAlignment="Left" Margin="10,26,0,0" VerticalAlignment="Top" Width="154" Height="41" FontSize="16" Click="connectionButton_Click"/>
+        <Button x:Name="insertOwnerButton" Content="Wstaw właściciela" HorizontalAlignment="Left" Margin="169,26,0,0" VerticalAlignment="Top" Width="154" Height="41" FontSize="16" Click="insertOwnerButton_Click"/>
+        <Button x:Name="insertCarButton" Content="Wstaw samochód" HorizontalAlignment="Left" Margin="328,25,0,0" VerticalAlignment="Top" Width="154" Height="41" FontSize="16" Click="insertCarButton_Click"/>
+        <Button x:Name="showCarsButton" Content="Wyświetl samochody" HorizontalAlignment="Left" Margin="487,25,0,0" VerticalAlignment="Top" Width="154" Height="41" FontSize="16" Click="showCarsButton_Click"/>
+        <Button x:Name="deleteButton" Content="Usuń wybrany wiersz" HorizontalAlignment="Left" Margin="646,26,0,0" VerticalAlignment="Top" Width="136" Height="41" FontSize="14" Click="deleteButton_Click"/>
+        <Button x:Name="productionDate" Content="Filtrowanie po dacie produkcji" HorizontalAlignment="Left" VerticalAlignment="Top" Width="163" Margin="10,72,0,0" Height="32" Click="productionDate_Click"/>
+        <Button x:Name="purchaseDate" Content="Filtrowanie po dacie zakupu" HorizontalAlignment="Left" VerticalAlignment="Top" Width="163" Margin="178,72,0,0" Height="32" Click="purchaseDate_Click"/>
+
+    </Grid>
+</Window>
