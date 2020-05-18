@@ -84,7 +84,7 @@ namespace Lab9
 
                 streamWriter.Close();
 
-                MessageBox.Show("Plik zostls popranie zapisany");
+                MessageBox.Show("File has been saved successfuly");
             }
             catch (Exception ex)
             {
@@ -146,7 +146,7 @@ namespace Lab9
 
                 streamReader.Close();
 
-                MessageBox.Show("plik zostal poprawnie zapisany");
+                MessageBox.Show("File has been loaded successfuly");
             }
             catch (Exception ex)
             {
@@ -217,7 +217,7 @@ namespace Lab9
                 serializer.Serialize(fileStream, Students);
                 fileStream.Close();
 
-                MessageBox.Show("plik zostal poprawnie zapisany");
+                MessageBox.Show("File has been saved successfuly");
             }
             catch (Exception ex)
             {
@@ -236,7 +236,7 @@ namespace Lab9
 
                 StudentDataGrid.ItemsSource = Students;
 
-                MessageBox.Show("plik zostal poprawnie zapisany");
+                MessageBox.Show("File has been loaded successfuly");
             }
             catch (Exception ex)
             {
