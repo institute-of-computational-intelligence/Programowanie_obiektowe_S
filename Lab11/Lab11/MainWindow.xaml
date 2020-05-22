@@ -1,0 +1,27 @@
+﻿<Window x:Class="Lab11.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab11"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="4*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="AddInvoice" Content="Add Invoice" Margin="10" Grid.Row="1" Grid.Column="0" FontFamily="Arial" FontSize="24" Click="AddInvoice_Click"/>
+        <Button x:Name="RemoveInvoice" Content="Remove Invoice" Margin="10" Grid.Row="1" Grid.Column="1" FontFamily="Arial" FontSize="24" Click="RemoveInvoice_Click"/>
+        <Button x:Name="ModifyInvoice" Content="Modify Invoice" Margin="10" Grid.Row="1" Grid.Column="2" FontFamily="Arial" FontSize="24" Click="ModifyInvoice_Click"/>
+        <Button x:Name="FilterInvoices" Content="Filter" Margin="10" Grid.Row="1" Grid.Column="3" FontFamily="Arial" FontSize="24" Click="FilterInvoices_Click"/>
+        <DataGrid x:Name="InvoicesDG" Margin="0" Grid.ColumnSpan="4" CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserSortColumns="False" CanUserResizeRows="False"/>
+
+    </Grid>
+</Window>
