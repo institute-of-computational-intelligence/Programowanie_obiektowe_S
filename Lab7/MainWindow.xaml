@@ -1,0 +1,31 @@
+﻿<Window x:Name="Calculator" x:Class="Lab7.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab7"
+        mc:Ignorable="d"
+        Title="Calculator" Height="283.201" Width="294.482" VerticalAlignment="Top" HorizontalAlignment="Left">
+    <Grid Margin="27,14,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="214" Width="221">
+        <Canvas Height="204" Margin="10,10,54.2,27.6" Width="211" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <TextBox x:Name="Result" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="190" Canvas.Left="10" IsReadOnly="True" MaxLines="1" MaxLength="15" TextOptions.TextHintingMode="Animated" TextOptions.TextFormattingMode="Display" HorizontalContentAlignment="Right" Canvas.Top="10" FontSize="16"/>
+            <Button x:Name="Number6" Content="6" HorizontalAlignment="Left" VerticalAlignment="Top" Width="34" Canvas.Left="88" Canvas.Top="88" Height="32"/>
+            <Button x:Name="Subtract" Content="-" HorizontalAlignment="Left" VerticalAlignment="Top" Width="34" Canvas.Left="127" Canvas.Top="125" Height="32"/>
+            <Button x:Name="Number9" Content="9" HorizontalAlignment="Left" VerticalAlignment="Top" Width="34" Canvas.Left="88" Canvas.Top="49" Tag="" Height="33"/>
+            <Button x:Name="Divide" Content="/" HorizontalAlignment="Left" VerticalAlignment="Top" Width="34" Canvas.Left="166" Canvas.Top="125" Height="32"/>
+            <Button x:Name="Multiply" Content="*" HorizontalAlignment="Left" VerticalAlignment="Top" Width="34" Canvas.Left="166" Canvas.Top="87" Height="33"/>
+            <Button x:Name="Number3" Content="3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="34" Canvas.Left="88" Canvas.Top="125" Height="32"/>
+            <Button x:Name="Number7" Content="7" HorizontalAlignment="Left" VerticalAlignment="Top" Width="34" Canvas.Top="47" Canvas.Left="10" Height="35"/>
+            <Button x:Name="Equals" Content="=" HorizontalAlignment="Left" VerticalAlignment="Top" Width="73" Click="Equals_Click" Canvas.Left="127" Canvas.Top="162" Height="32"/>
+            <Button x:Name="Number8" Content="8" HorizontalAlignment="Left" VerticalAlignment="Top" Width="34" Canvas.Left="49" Canvas.Top="49" Height="33"/>
+            <Button x:Name="Clear" Content="C" HorizontalAlignment="Left" VerticalAlignment="Top" Width="34" Click="Clear_Click" Canvas.Left="166" Canvas.Top="49" Height="33"/>
+            <Button x:Name="Add" Content="+" HorizontalAlignment="Left" VerticalAlignment="Top" Width="34" Height="71" Canvas.Left="127" Canvas.Top="49"/>
+            <Button x:Name="Number1" Content="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="34" Canvas.Left="10" Canvas.Top="125" Height="32"/>
+            <Button x:Name="Number2" Content="2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="34" Canvas.Left="49" Canvas.Top="125" Height="32"/>
+            <Button x:Name="Number4" Content="4" HorizontalAlignment="Left" VerticalAlignment="Top" Width="34" Canvas.Left="10" Canvas.Top="88" Height="32"/>
+            <Button x:Name="Number5" Content="5" HorizontalAlignment="Left" VerticalAlignment="Top" Width="34" Canvas.Left="49" Canvas.Top="88" Height="32"/>
+            <Button x:Name="Number0" Content="0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="73" Canvas.Left="49" Canvas.Top="162" Height="32"/>
+            <Button x:Name="Point" Content="," HorizontalAlignment="Left" VerticalAlignment="Top" Width="34" Canvas.Left="10" Canvas.Top="162" Click="Point_Click" Height="32"/>
+        </Canvas>
+    </Grid>
+</Window>
