@@ -1,0 +1,16 @@
+﻿<Window x:Class="Lab9.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab9"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="679.502">
+    <Grid>
+        <DataGrid x:Name="StudentsDataGrid" HorizontalAlignment="Center" Height="371" Margin="10,39,10,10" VerticalAlignment="Center" Width="651"/>
+        <Button x:Name="ButtonAddStudent" Content="Add Student" HorizontalAlignment="Left" Margin="11,10,0,0" VerticalAlignment="Top" Width="100" Click="ButtonAddStudent_Click"/>
+        <Button x:Name="ButtonRemoveStudent" Content="Remove Student" HorizontalAlignment="Left" Margin="131,10,0,0" VerticalAlignment="Top" Width="100" Click="ButtonRemoveStudent_Click"/>
+        <Button x:Name="ButtonSaveToFile" Content="Save To File" HorizontalAlignment="Left" Margin="251,10,0,0" VerticalAlignment="Top" Width="100" Click="ButtonSaveToFile_Click"/>
+        <Button x:Name="ButtonLoadFromFile" Content="Load From File" HorizontalAlignment="Left" Margin="371,10,0,0" VerticalAlignment="Top" Width="100" Click="ButtonLoadFromFile_Click"/>
+    </Grid>
+</Window>
