@@ -1,0 +1,15 @@
+﻿<Window x:Class="Lab11.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab11"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="679.502">
+    <Grid>
+        <DataGrid x:Name="DataGridInvoices" HorizontalAlignment="Center" Height="371" Margin="10,39,10,10" VerticalAlignment="Center" Width="651"/>
+        <Button x:Name="ButtonAddInvoice" Content="Add Invoice" HorizontalAlignment="Left" Margin="11,10,0,0" VerticalAlignment="Top" Width="100" Click="ButtonAddInvoice_Click"/>
+        <Button x:Name="ButtonRemoveInvoice" Content="Remove Invoice" HorizontalAlignment="Left" Margin="131,10,0,0" VerticalAlignment="Top" Width="100" Click="ButtonRemoveInvoice_Click"/>
+        <Button x:Name="ButtonEditInvoice" Content="Edit Invoice" HorizontalAlignment="Left" Margin="251,10,0,0" VerticalAlignment="Top" Width="100" Click="ButtonEditInvoice_Click"/>
+    </Grid>
+</Window>
