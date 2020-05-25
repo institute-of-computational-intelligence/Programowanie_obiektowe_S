@@ -1,0 +1,17 @@
+﻿<Window x:Class="Lab8.App.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab8.App"
+        mc:Ignorable="d"
+        Title="Studenci" Height="450" Width="800">
+    <Grid>
+        <Button x:Name="b_addStudentWindowShow" Content="Dodaj studenta" HorizontalAlignment="Left" Margin="29,84,0,0" VerticalAlignment="Top" Width="150" Height="50" RenderTransformOrigin="0.152,1.332" Click="B_addStudentWindowShow_Click" />
+        <Button x:Name="b_removeStudentWindowShow" Content="Usuń studenta" HorizontalAlignment="Left" Margin="184,84,0,0" VerticalAlignment="Top" Width="150" Height="50" Grid.ColumnSpan="2" Click="B_removeStudentWindowShow_Click" />
+        <DockPanel Height="287" LastChildFill="False" Margin="10,0,-0.4,0" VerticalAlignment="Bottom" Grid.ColumnSpan="2">
+            <DataGrid x:Name="dg_Students"  DockPanel.Dock="Bottom" Height="275" VerticalAlignment="Top" Margin="10,0,9.4,0"/>
+        </DockPanel>
+        <Button x:Name="b_addGradeWindowShow" Content="Dodaj ocenę" HorizontalAlignment="Left" Margin="339,84,0,0" VerticalAlignment="Top" Width="150" Height="50" Click="B_addGradeWindowShow_Click" />
+    </Grid>
+</Window>

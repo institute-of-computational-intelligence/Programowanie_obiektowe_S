@@ -1,0 +1,21 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab8.App"
+        xmlns:Model="clr-namespace:Lab8.Model;assembly=Lab8.Model" x:Class="Lab8.App.AddGradeWindow"
+        mc:Ignorable="d"
+        Title="AddGradeWindow" Height="218.414" Width="224.878">
+    <Grid>
+        <ComboBox x:Name="cb_Grades" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="120">
+            <Model:Grade GradeValue="3"/>
+            <Model:Grade GradeValue="3.5"/>
+            <Model:Grade GradeValue="4"/>
+            <Model:Grade GradeValue="4.5"/>
+            <Model:Grade GradeValue="5"/>
+        </ComboBox>
+        <Button x:Name="b_addGrade" Content="Dodaj ocenę" HorizontalAlignment="Left" Margin="10,37,0,0" VerticalAlignment="Top" Width="120" Click="B_addGrade_Click"/>
+
+    </Grid>
+</Window>
