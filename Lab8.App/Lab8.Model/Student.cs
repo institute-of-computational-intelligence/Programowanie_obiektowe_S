@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Lab8.Model.Attributes;
 
 namespace Lab8.Model
 {
@@ -12,8 +13,10 @@ namespace Lab8.Model
         public string FirstName { get; set; }
         public string SurName { get; set; }
         public string  Faculty { get; set; }
-        public IList<Grade> Grades { get; set; }
+        [SerializationIgnore]
+        public List<Grade> Grades { get; set; }
 
+        [SerializationIgnore]
         public string JoinedGrades => string.Join(", ", Grades);
 
         public Student()

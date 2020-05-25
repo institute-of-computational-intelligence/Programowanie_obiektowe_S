@@ -10,8 +10,16 @@
         <Button x:Name="b_addStudentWindowShow" Content="Dodaj studenta" HorizontalAlignment="Left" Margin="29,84,0,0" VerticalAlignment="Top" Width="150" Height="50" RenderTransformOrigin="0.152,1.332" Click="B_addStudentWindowShow_Click" />
         <Button x:Name="b_removeStudentWindowShow" Content="Usuń studenta" HorizontalAlignment="Left" Margin="184,84,0,0" VerticalAlignment="Top" Width="150" Height="50" Grid.ColumnSpan="2" Click="B_removeStudentWindowShow_Click" />
         <DockPanel Height="287" LastChildFill="False" Margin="10,0,-0.4,0" VerticalAlignment="Bottom" Grid.ColumnSpan="2">
-            <DataGrid x:Name="dg_Students"  DockPanel.Dock="Bottom" Height="275" VerticalAlignment="Top" Margin="10,0,9.4,0"/>
+            <DataGrid x:Name="dg_Students"  DockPanel.Dock="Bottom" Height="275" VerticalAlignment="Top" Margin="10,0,9.4,0" SelectionMode="Single"/>
         </DockPanel>
         <Button x:Name="b_addGradeWindowShow" Content="Dodaj ocenę" HorizontalAlignment="Left" Margin="339,84,0,0" VerticalAlignment="Top" Width="150" Height="50" Click="B_addGradeWindowShow_Click" />
+        <Button x:Name="b_saveToFlatFileDialog" Content="Zapisz do pliku txt" HorizontalAlignment="Left" Margin="502,84,0,0" VerticalAlignment="Top" Width="113" Height="22" Click="B_saveToFlatFileDialog_Click" />
+        <Button x:Name="b_loadFromFlatFileDialog" Content="Otwórz z pliku txt" HorizontalAlignment="Left" Margin="502,111,0,0" VerticalAlignment="Top" Width="113" Height="22" Click="B_loadFromFlatFileDialog_Click" />
+        <Button x:Name="b_saveToXmlFileDialog" Content="Zapisz do pliku xml" HorizontalAlignment="Left" Margin="620,84,0,0" VerticalAlignment="Top" Width="113" Height="22" Click="B_saveToXmlFileDialog_Click" />
+        <Button x:Name="b_loadFromXMLFileDialog" Content="Otwórz z pliku xml" HorizontalAlignment="Left" Margin="620,111,0,0" VerticalAlignment="Top" Width="113" Height="22" Click="B_loadFromXMLFileDialog_Click" />
+        <Button x:Name="b_loadFromFlatFileDialog_Copy" Content="Otwórz z pliku txt" HorizontalAlignment="Left" Margin="502,111,0,0" VerticalAlignment="Top" Width="113" Height="22" Click="B_loadFromFlatFileDialog_Click" />
+        <Button x:Name="b_loadAnotherStudenFromFile" Content="Pobierz kolejnego studenta" HorizontalAlignment="Left" Margin="502,30,0,0" VerticalAlignment="Top" Width="146" Height="22" Click="B_loadAnotherStudenFromFile_Click" />
+        <Button x:Name="b_loadFromFlatFileEnumDialog" Content="Otwórz z pliku txt (ENUM)" HorizontalAlignment="Left" Margin="502,57,0,0" VerticalAlignment="Top" Width="146" Height="22" Click="B_loadFromFlatFileEnumDialog_Click" />
+        <Button x:Name="b_closeStream" Content="Close stream(ENUM)" HorizontalAlignment="Left" Margin="502,3,0,0" VerticalAlignment="Top" Width="146" Height="22" Click="B_closeStream_Click" />
     </Grid>
 </Window>

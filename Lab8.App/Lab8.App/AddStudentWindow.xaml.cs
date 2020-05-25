@@ -37,7 +37,7 @@ namespace Lab8.App
 
         private void B_addStudent_Click(object sender, RoutedEventArgs e)
         {
-            if (!Regex.IsMatch(tb_FirstName.Text, @"^\p{L}{1,12}$") ||
+            if (!Regex.IsMatch(tb_FirstName.Text, @"^\p{Lu}{1,12}\p{Ll}{1,12}$") ||
                 !Regex.IsMatch(tb_SurName.Text, @"^\p{L}{1,12}$") ||
                 !Regex.IsMatch(tb_Faculty.Text, @"^\p{L}{1,12}$") ||
                 !Regex.IsMatch(tb_StudentNo.Text, @"^[0-9]{4,10}$"))

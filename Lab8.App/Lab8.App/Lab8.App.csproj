@@ -109,6 +109,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Lab8.DAL\Lab8.DAL.csproj">
+      <Project>{1ac6bd29-3e7e-4886-ac2d-ebcc0884055e}</Project>
+      <Name>Lab8.DAL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Lab8.Model\Lab8.Model.csproj">
       <Project>{F9A0A7A6-D7D2-476D-862E-985312A79B64}</Project>
       <Name>Lab8.Model</Name>
