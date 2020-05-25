@@ -25,6 +25,7 @@ namespace lab8
             InitializeComponent();
             if(grades!=null)
             {
+
                 tbGrade.Text = grades.Grade.ToString();
                 tbSubject.Text = grades.Subject;
             }

@@ -10,7 +10,12 @@ namespace lab8
     {
         public string Subject { get; set; }
         public int Grade { get; set; }
-        public int Index { get; set; }
         
+        public Grades()
+        {
+            Subject = "";
+            Grade = 0;
+            
+        }
     }
 }

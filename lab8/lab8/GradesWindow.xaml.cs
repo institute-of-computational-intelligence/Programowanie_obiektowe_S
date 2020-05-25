@@ -18,26 +18,23 @@ namespace lab8
     /// </summary>
     public partial class GradesWindow : Window
     {
-        public List<Grades> grade { get; set; }
-        
+        IList<Grades> grade { get; set; }
         public GradesWindow()
         {
-                grade = new List<Grades>()
+            grade = new List<Grades>()
             {
-                new Grades(){Subject="programowanie", Grade=4, Index=1033},
-                new Grades(){Subject="prograwanie", Grade=5, Index=1021}
+                new Grades(){Subject="",Grade=0}
             };
-           
-            List<Grades> found = grade.FindAll(oElement => oElement.Index.Equals(1021));
-            InitializeComponent(); 
-            t.Columns.Add(new DataGridTextColumn() { Header = "Przedmiot", Binding = new Binding("Subject") });
-            t.Columns.Add(new DataGridTextColumn() { Header = "Ocena", Binding = new Binding("Grade") });
+            InitializeComponent();
+            t.Columns.Add(new DataGridTextColumn() { Header = "Ocena", Binding = new Binding("Value") });
+             t.Columns.Add(new DataGridTextColumn() { Header = "Przedmiot", Binding = new Binding("Subject") });
             
             t.AutoGenerateColumns = false;
             t.ItemsSource = grade;
-
-            
         }
+
+
+    
 
         private void AddGrades_Click(object sender, RoutedEventArgs e)
         {
