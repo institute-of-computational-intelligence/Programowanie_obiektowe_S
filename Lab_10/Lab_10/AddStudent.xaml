@@ -1,0 +1,28 @@
+﻿<Window x:Class="Lab_10.AddStudent"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab_10"
+        mc:Ignorable="d"
+        Title="AddStudent" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label x:Name="nameLab" Content="Imię" HorizontalAlignment="Right" Margin="0,0,15,0" VerticalAlignment="Center" FontFamily="Arial" FontSize="24"/>
+        <Label x:Name="surnameLab" Content="Nazwisko" HorizontalAlignment="Right" Margin="0,0,15,0" VerticalAlignment="Center" FontFamily="Arial" FontSize="24" Grid.Row="1"/>
+        <Label x:Name="depLab" Content="Wydział" HorizontalAlignment="Right" Margin="0,0,15,0" VerticalAlignment="Center" FontFamily="Arial" FontSize="24" Grid.Row="2"/>
+        <TextBox x:Name="NameTab" Grid.Column="1" Margin="0,30,15,30" TextWrapping="Wrap" FontFamily="Arial" FontSize="24" VerticalAlignment="Center" Padding="5,0,0,0"/>
+        <TextBox x:Name="SurnameTab" Grid.Column="1" Margin="0,30,15,30" TextWrapping="Wrap" FontFamily="Arial" FontSize="24" VerticalAlignment="Center" Padding="5,0,0,0" Grid.Row="1"/>
+        <TextBox x:Name="DepTab" Grid.Column="1" Margin="0,30,15,30" TextWrapping="Wrap" FontFamily="Arial" FontSize="24" VerticalAlignment="Center" Padding="5,0,0,0" Grid.Row="2"/>
+        <Button x:Name="OkButton" Content="OK" Grid.Column="1" HorizontalAlignment="Right" Margin="0,0,15,0" Grid.Row="3" VerticalAlignment="Center" Width="180" Height="60" FontFamily="Arial" FontSize="24" Click="OkButton_Click"/>
+    </Grid>
+</Window>
