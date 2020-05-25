@@ -9,11 +9,11 @@
         Title="AddGradeWindow" Height="218.414" Width="224.878">
     <Grid>
         <ComboBox x:Name="cb_Grades" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="120">
-            <Model:Grade GradeValue="3"/>
-            <Model:Grade GradeValue="3.5"/>
-            <Model:Grade GradeValue="4"/>
-            <Model:Grade GradeValue="4.5"/>
-            <Model:Grade GradeValue="5"/>
+            <Model:Grade Value="3"/>
+            <Model:Grade Value="3.5"/>
+            <Model:Grade Value="4"/>
+            <Model:Grade Value="4.5"/>
+            <Model:Grade Value="5"/>
         </ComboBox>
         <Button x:Name="b_addGrade" Content="Dodaj ocenę" HorizontalAlignment="Left" Margin="10,37,0,0" VerticalAlignment="Top" Width="120" Click="B_addGrade_Click"/>
 

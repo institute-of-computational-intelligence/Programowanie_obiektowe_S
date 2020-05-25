@@ -1,18 +1,22 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Lab8.Model.Attributes;
+using System.Collections.Generic;
 
 namespace Lab8.Model
 {
+    [DbTab]
     public class Student
     {
+        [DbCol]
         public int StudentNo { get; set; }
+        [DbCol]
         public string FirstName { get; set; }
+        [DbCol]
         public string SurName { get; set; }
-        public string  Faculty { get; set; }
+        [DbCol]
+        public string Faculty { get; set; }
+        [DbCol]
+        public DateTime DateOfBirth { get; set; }
         [SerializationIgnore]
         public List<Grade> Grades { get; set; }
 

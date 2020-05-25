@@ -20,7 +20,7 @@ namespace Lab8.App
         {
             if (cb_Grades.SelectedItem != null && cb_Grades.SelectedItem is Grade grade)
             {
-                grade.DateOfIssue = DateTime.Now;
+                grade.Date = DateTime.Now;
                 Student.Grades.Add(grade);
                 DialogResult = true;
             }

@@ -7,14 +7,16 @@
         mc:Ignorable="d"
         Title="Dodaj studenta" Height="242.4" Width="245.6">
     <Grid>
-        <TextBox x:Name="tb_FirstName" HorizontalAlignment="Left" Height="23" Margin="102,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.495,0.431"/>
-        <TextBox x:Name="tb_SurName" HorizontalAlignment="Left" Height="23" Margin="102,75,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.49,0.396"/>
-        <TextBox x:Name="tb_StudentNo" HorizontalAlignment="Left" Height="23" Margin="102,103,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="tb_Faculty" HorizontalAlignment="Left" Height="23" Margin="102,131,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Imię:" HorizontalAlignment="Left" Margin="59,43,0,0" VerticalAlignment="Top"/>
-        <Label Content="Nazwisko:" HorizontalAlignment="Left" Margin="35,72,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.367,0.875"/>
-        <Label Content="Nr Indeksu:" HorizontalAlignment="Left" Margin="30,103,0,78.8"/>
+        <TextBox x:Name="tb_FirstName" HorizontalAlignment="Left" Height="23" Margin="112,18,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.495,0.431"/>
+        <TextBox x:Name="tb_SurName" HorizontalAlignment="Left" Height="23" Margin="112,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.49,0.396"/>
+        <TextBox x:Name="tb_StudentNo" HorizontalAlignment="Left" Height="23" Margin="112,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tb_Faculty" HorizontalAlignment="Left" Height="23" Margin="112,131,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Imię:" HorizontalAlignment="Left" Margin="69,14,0,0" VerticalAlignment="Top"/>
+        <Label Content="Nazwisko:" HorizontalAlignment="Left" Margin="45,43,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.367,0.875"/>
+        <Label Content="Nr Indeksu:" HorizontalAlignment="Left" Margin="40,74,0,107.8"/>
         <Label Content="Wydział:" HorizontalAlignment="Left" Margin="40,134,0,0" VerticalAlignment="Top" Height="29" RenderTransformOrigin="0.456,0.515"/>
         <Button x:Name="b_addStudent" Content="Dodaj" HorizontalAlignment="Left" Margin="147,159,0,0" VerticalAlignment="Top" Width="75" Click="B_addStudent_Click"/>
+        <Label Content="Data ur.&#xD;&#xA;" HorizontalAlignment="Left" Margin="34,98,0,83.8"/>
+        <DatePicker x:Name="datePicker_dateOfBirth" HorizontalAlignment="Left" Margin="112,105,0,0" VerticalAlignment="Top" Width="120"/>
     </Grid>
 </Window>

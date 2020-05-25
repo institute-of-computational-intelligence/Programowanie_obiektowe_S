@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Attributes\DbColAttribute.cs" />
+    <Compile Include="Attributes\DbTabAttribute.cs" />
     <Compile Include="Attributes\SerializationIgnore.cs" />
     <Compile Include="Grade.cs" />
     <Compile Include="Student.cs" />

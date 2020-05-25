@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Repo\IRepository.cs" />
+    <Compile Include="Repo\Repository.cs" />
     <Compile Include="Serializers\StreamEnumerable.cs" />
     <Compile Include="Serializers\StreamSerializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

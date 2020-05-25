@@ -1,13 +1,17 @@
-﻿using Lab8.DAL.Serializers;
+﻿using Lab8.DAL.Repo;
+using Lab8.DAL.Serializers;
 using Lab8.Model;
 using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.IO;
+using System.Reflection;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Xml.Serialization;
+using Lab8.Model.Attributes;
 
 namespace Lab8.App
 {
@@ -20,24 +24,14 @@ namespace Lab8.App
         private StreamEnumerable<Student> _streamEnumerable;
         private FileStream _fileStream;
         private StreamReader _streamReader;
-
+        private IRepository<Student> repository;
         public MainWindow()
         {
-            Students = new List<Student>
-            {
-                new Student() {FirstName = "Jan", SurName = "Kowalski", Faculty = "WIMII", StudentNo = 1010},
-                new Student() {FirstName = "Michał", SurName = "Nowak", Faculty = "WIMII", StudentNo = 1011},
-                new Student() {FirstName = "Jacek", SurName = "Makieta", Faculty = "WIMII", StudentNo = 1012},
-            };
+            var _connString = ConfigurationManager.ConnectionStrings["FileDbConnectionStr"].ConnectionString;
+            repository = new Repository<Student>(_connString);
             InitializeComponent();
-            dg_Students.Columns.Add(new DataGridTextColumn() { Header = "Imię", Binding = new Binding("FirstName") });
-            dg_Students.Columns.Add(new DataGridTextColumn() { Header = "Nazwisko", Binding = new Binding("SurName") });
-            dg_Students.Columns.Add(new DataGridTextColumn() { Header = "Wydział", Binding = new Binding("Faculty") });
-            dg_Students.Columns.Add(new DataGridTextColumn()
-            { Header = "NrIndeksu", Binding = new Binding("StudentNo") });
-            dg_Students.Columns.Add(new DataGridTextColumn() { Header = "Oceny", Binding = new Binding("JoinedGrades") });
-            dg_Students.AutoGenerateColumns = false;
-            dg_Students.ItemsSource = Students;
+            Students = repository.SqlSelect();
+            SetGrid(Students);
         }
 
         private void B_addStudentWindowShow_Click(object sender, RoutedEventArgs e)
@@ -54,7 +48,8 @@ namespace Lab8.App
         {
             if (dg_Students.SelectedItem is Student studentToRemove)
             {
-                Students.Remove(studentToRemove);
+                repository.SqlDelete(studentToRemove);
+                dg_Students.ItemsSource = repository.SqlSelect();
                 dg_Students.Items.Refresh();
             }
         }
@@ -240,6 +235,36 @@ namespace Lab8.App
             _streamReader.Close();
             _fileStream.Close();
             MessageBox.Show("Streams closed");
+        }
+
+        private void DatePicker_filterGrid_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (datePicker_filterGrid.SelectedDate.HasValue)
+            {
+                dg_Students.ItemsSource = repository
+                        .SqlSelect(new Tuple<string, string, object, string>("DateOfBirth", "=", datePicker_filterGrid.SelectedDate.Value.ToString("yyyy-MM-dd"), null));
+            }
+            else
+            {
+                dg_Students.ItemsSource = repository.SqlSelect();
+            }
+            dg_Students.Items.Refresh();
+
+        }
+
+        private void SetGrid<T>(List<T> list) where T : new()
+        {
+            Type type = typeof(T);
+            if(type.GetCustomAttribute<DbTabAttribute>() == null)
+                return;
+            foreach (var prop in type.GetProperties())
+            {
+                var col = prop.GetCustomAttribute<DbColAttribute>();
+                if(col != null)
+                    dg_Students.Columns.Add(new DataGridTextColumn(){Header = col.Title ?? prop.Name, Binding = new Binding(prop.Name)});
+            }
+            dg_Students.AutoGenerateColumns = false;
+            dg_Students.ItemsSource = list;
         }
     }
 }
