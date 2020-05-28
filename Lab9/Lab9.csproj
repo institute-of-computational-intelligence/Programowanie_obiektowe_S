@@ -55,10 +55,13 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ISerializedStream.cs" />
     <Compile Include="IStudentsStoreUtil.cs" />
     <Compile Include="FileUtil.cs" />
     <Compile Include="SerializedFileUtil.cs" />
+    <Compile Include="SerializedFileStream.cs" />
     <Compile Include="SerializedXMLUtil.cs" />
+    <Compile Include="StreamEnumerable.cs" />
     <Compile Include="Student.cs" />
     <Compile Include="StudentWindow.xaml.cs">
       <DependentUpon>StudentWindow.xaml</DependentUpon>

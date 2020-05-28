@@ -11,7 +11,7 @@ namespace Lab8
 {
     public class SerializedXMLUtil : IStudentsStoreUtil
     {
-        public string Path { get; }
+        public string Path { get; set; }
         public SerializedXMLUtil(string path)
         {
             Path = path;
@@ -19,32 +19,21 @@ namespace Lab8
         public List<Student> Load()
         {
             List<Student> students = new List<Student>();
-            if(File.Exists(Path))
-            {   
-                
-                XmlSerializer serializer = new XmlSerializer(typeof(Student));
+            
+            XmlSerializer serializer = new XmlSerializer(typeof(List<Student>));
 
-                FileStream fs = new FileStream(Path, FileMode.Open);
-                XmlReader reader = XmlReader.Create(fs);
-                Student s;
-                
-                
-                while (serializer.CanDeserialize(reader))
-                {
-                    s = (Student)serializer.Deserialize(reader);
-                    students.Add(s);
-                }
-                fs.Close();
-            }
+            FileStream fs = new FileStream(Path, FileMode.Open);
+
+            students =(List<Student>) serializer.Deserialize(fs);
+            fs.Close();
             return students;
         }
 
         public void Save(List<Student> students)
         {
             FileStream fs = new FileStream(Path, FileMode.Create);
-            XmlSerializer serializer = new XmlSerializer(typeof(Student));
-            foreach (Student s in students)
-                serializer.Serialize(fs, s);
+            XmlSerializer serializer = new XmlSerializer(typeof(List<Student>));
+            serializer.Serialize(fs, students);
             fs.Close();
         }
     }

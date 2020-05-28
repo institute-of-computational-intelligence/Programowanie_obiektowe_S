@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -63,25 +64,81 @@ namespace Lab8
 
         private void saveToFileButton_Click(object sender, RoutedEventArgs e)
         {
+            SaveFileDialog fileDialog = new SaveFileDialog();
+            fileDialog.Filter = "Plik tekstowy|*.txt";
+            fileDialog.ShowDialog();
+            try
+            {
+                (ssUtil as SerializedFileUtil).Path = fileDialog.FileName;
+                ssUtil.Save(list);
+            }
+            catch(Exception)
+            {
+                MessageBox.Show("Nie udało się zapisać do pliku.");
+            }
+            MessageBox.Show("Pomyślnie zapisano do pliku txt.");
             
-            ssUtil.Save(list);
         }
 
         private void loadFromFileButton_Click(object sender, RoutedEventArgs e)
         {
-            list = ssUtil.Load();
-            dg.Items.Refresh();
+            OpenFileDialog fileDialog = new OpenFileDialog();
+            fileDialog.Filter = "Plik tekstowy|*.txt";
+            fileDialog.ShowDialog();
+
+            try
+            {
+                (ssUtil as SerializedFileUtil).Path = fileDialog.FileName;
+                list = ssUtil.Load();
+                dg.ItemsSource = list;
+                dg.Items.Refresh();
+                MessageBox.Show("Pomyślnie odczytano plik.");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Błąd ładowania z pliku txt.");
+            }
+            
+
         }
 
         private void saveToXMLButton_Click(object sender, RoutedEventArgs e)
         {
-            xmlSSUtil.Save(list);
+            SaveFileDialog fileDialog = new SaveFileDialog();
+            fileDialog.Filter = "Plik XML|*.xml";
+            fileDialog.ShowDialog();
+            try
+            {
+                (xmlSSUtil as SerializedXMLUtil).Path = fileDialog.FileName;
+                xmlSSUtil.Save(list);
+                MessageBox.Show("Pomyślnie zapisano do pliku xml.");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Nie udało się zapisać do pliku.");
+            }
+            
+
         }
 
         private void loadFromXMLButton_Click(object sender, RoutedEventArgs e)
         {
-            list = xmlSSUtil.Load();
-            dg.Items.Refresh();
+            OpenFileDialog fileDialog = new OpenFileDialog();
+            fileDialog.Filter = "Plik XML|*.xml";
+            fileDialog.ShowDialog();
+            try
+            {
+                (xmlSSUtil as SerializedXMLUtil).Path = fileDialog.FileName;
+                list = xmlSSUtil.Load();
+                dg.ItemsSource = list;
+                dg.Items.Refresh();
+                MessageBox.Show("Pomyślnie odczytano plik.");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Błąd ładowania z pliku xml.");
+            }
+            
         }
     }
 }

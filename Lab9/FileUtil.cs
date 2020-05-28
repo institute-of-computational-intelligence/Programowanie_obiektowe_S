@@ -10,7 +10,7 @@ namespace Lab8
 {
     public class FileUtil : IStudentsStoreUtil
     {
-        public string Path { get; }
+        public string Path { get; set; }
         public FileUtil(string path)
         {
             Path = path;
@@ -20,34 +20,28 @@ namespace Lab8
             List<Student> students = new List<Student>();
             FileStream fs;
             StreamReader sr;
-            try
+            
+            fs = new FileStream(Path, FileMode.Open);
+            sr = new StreamReader(fs);
+            
+            while (!sr.EndOfStream)
             {
-                fs = new FileStream(Path, FileMode.Open);
-                sr = new StreamReader(fs);
-                
-                while (!sr.EndOfStream)
-                {
 
-                    sr.ReadLine();//[[Student]]
-                    sr.ReadLine();//[Name]
-                    var name = sr.ReadLine();
-                    sr.ReadLine();//[Surname]
-                    var surname = sr.ReadLine();
-                    sr.ReadLine();//[Index]
-                    var index = int.Parse(sr.ReadLine());
-                    sr.ReadLine();//[Subject]
-                    var subject = sr.ReadLine();
-                    sr.ReadLine();//[[]]
-                    Student s = new Student(name, surname, index, subject);
-                    students.Add(s);
-                }
-                sr.Close();
-                
+                sr.ReadLine();//[[Student]]
+                sr.ReadLine();//[Name]
+                var name = sr.ReadLine();
+                sr.ReadLine();//[Surname]
+                var surname = sr.ReadLine();
+                sr.ReadLine();//[Index]
+                var index = int.Parse(sr.ReadLine());
+                sr.ReadLine();//[Subject]
+                var subject = sr.ReadLine();
+                sr.ReadLine();//[[]]
+                Student s = new Student(name, surname, index, subject);
+                students.Add(s);
             }
-            catch(Exception e)
-            {
-                MessageBox.Show("Blad Ladowania z pliku");
-            }
+            sr.Close();
+               
             return students;
 
         }
