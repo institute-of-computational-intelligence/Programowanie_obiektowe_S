@@ -1,0 +1,30 @@
+﻿<Window x:Class="lab7.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lab7"
+        mc:Ignorable="d"
+        Title="Calculator" Height="185" Width="157">
+    <Grid>
+        <Button x:Name="Button_1" Content="1" HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top" Width="21" IsCancel="True" Height="21" Click="Button_1_Click"/>
+        <Button x:Name="Button_2" Content="2" HorizontalAlignment="Left" Margin="36,40,0,0" VerticalAlignment="Top" Width="21" IsCancel="True" Height="21" Click="Button_2_Click"/>
+        <Button x:Name="Button_3" Content="3" HorizontalAlignment="Left" Margin="62,40,0,0" VerticalAlignment="Top" Width="21" IsCancel="True" Height="21" Click="Button_3_Click"/>
+        <Button x:Name="Button_4" Content="4" HorizontalAlignment="Left" Margin="10,66,0,0" VerticalAlignment="Top" Width="21" IsCancel="True" Height="21" RenderTransformOrigin="0.637,2.158" Click="Button_4_Click"/>
+        <Button x:Name="Button_5" Content="5" HorizontalAlignment="Left" Margin="36,66,0,0" VerticalAlignment="Top" Width="21" IsCancel="True" Height="21" RenderTransformOrigin="2.038,2.391" Click="Button_5_Click"/>
+        <Button x:Name="Button_6" Content="6" HorizontalAlignment="Left" Margin="62,66,0,0" VerticalAlignment="Top" Width="21" IsCancel="True" Height="21" RenderTransformOrigin="2.973,1.983" Click="Button_6_Click"/>
+        <Button x:Name="Button_7" Content="7" HorizontalAlignment="Left" Margin="10,92,0,0" VerticalAlignment="Top" Width="21" IsCancel="True" Height="21" RenderTransformOrigin="0.695,3.092" Click="Button_7_Click"/>
+        <Button x:Name="Button_8" Content="8" HorizontalAlignment="Left" Margin="36,92,0,0" VerticalAlignment="Top" Width="21" IsCancel="True" Height="21" Click="Button_8_Click"/>
+        <Button x:Name="Button_9" Content="9" HorizontalAlignment="Left" Margin="62,92,0,0" VerticalAlignment="Top" Width="21" IsCancel="True" Height="21" RenderTransformOrigin="3.214,3.167" Click="Button_9_Click"/>
+        <Button x:Name="Button_dot" Content="," HorizontalAlignment="Left" Margin="10,118,0,0" VerticalAlignment="Top" Width="21" IsCancel="True" Height="21" RenderTransformOrigin="0.695,3.092" Click="Button_dot_Click"/>
+        <Button x:Name="Button_0" Content="0" HorizontalAlignment="Left" Margin="36,118,0,0" VerticalAlignment="Top" Width="47" IsCancel="True" Height="21" RenderTransformOrigin="0.695,3.092" Click="Button_0_Click"/>
+        <Button x:Name="Button_Plus" Content="+" HorizontalAlignment="Left" Margin="88,40,0,0" VerticalAlignment="Top" Width="21" IsCancel="True" Height="47" Click="Button_Plus_Click"/>
+        <Button x:Name="Button_Minus" Content="-" HorizontalAlignment="Left" Margin="88,92,0,0" VerticalAlignment="Top" Width="21" IsCancel="True" Height="21" RenderTransformOrigin="3.214,3.167" Click="Button_Minus_Click"/>
+        <Button x:Name="Button_EQ" Content="=" HorizontalAlignment="Left" Margin="88,118,0,0" VerticalAlignment="Top" Width="47" IsCancel="True" Height="21" RenderTransformOrigin="0.695,3.092" Click="Button_EQ_Click"/>
+        <Button x:Name="Button_Clear" Content="C" HorizontalAlignment="Left" Margin="114,40,0,0" VerticalAlignment="Top" Width="21" IsCancel="True" Height="21" Click="Button_Clear_Click"/>
+        <Button x:Name="Button_Multi" Content="*" HorizontalAlignment="Left" Margin="114,66,0,0" VerticalAlignment="Top" Width="21" IsCancel="True" Height="21" RenderTransformOrigin="2.973,1.983" Click="Button_Multi_Click"/>
+        <Button x:Name="Button_Diva" Content="/" HorizontalAlignment="Left" Margin="114,92,0,0" VerticalAlignment="Top" Width="21" IsCancel="True" Height="21" RenderTransformOrigin="3.214,3.167" Click="Button_Diva_Click"/>
+        <TextBox x:Name="TB" HorizontalAlignment="Left" Height="25" Margin="10,10,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="125" HorizontalContentAlignment="Right" SpellCheck.IsEnabled="True" TextChanged="TB_TextChanged"/>
+
+    </Grid>
+</Window>
