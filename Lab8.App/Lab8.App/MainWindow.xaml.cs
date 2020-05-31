@@ -27,6 +27,9 @@ namespace Lab8.App
         private IRepository<Student> repository;
         public MainWindow()
         {
+            string workingDirectory = AppDomain.CurrentDomain.BaseDirectory;
+            string projectDirectory = Directory.GetParent(workingDirectory).Parent.Parent.Parent.FullName;
+            AppDomain.CurrentDomain.SetData("DataDirectory", $@"{projectDirectory}\Lab8.App");
             var _connString = ConfigurationManager.ConnectionStrings["FileDbConnectionStr"].ConnectionString;
             repository = new Repository<Student>(_connString);
             InitializeComponent();
