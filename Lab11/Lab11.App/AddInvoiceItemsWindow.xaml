@@ -1,0 +1,19 @@
+﻿<Window x:Class="Lab11.App.AddInvoiceItemsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab11.App"
+        mc:Ignorable="d"
+        Title="AddInvoiceItemsWindow" Height="271.097" Width="246.829">
+    <Grid>
+        <Button x:Name="B_addInvoiceItem" Content="Add invoice item" HorizontalAlignment="Left" Margin="80,183,0,0" VerticalAlignment="Top" Width="105" Click="B_addInvoice_Click"/>
+        <Label Content="Name" HorizontalAlignment="Left" Margin="30,30,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tb_Name" HorizontalAlignment="Left" Height="23" Margin="104,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Amount" HorizontalAlignment="Left" Margin="30,70,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tb_Amount" HorizontalAlignment="Left" Height="23" Margin="104,73,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Price" HorizontalAlignment="Left" Margin="30,113,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tb_Price" HorizontalAlignment="Left" Height="23" Margin="104,116,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,20 @@
+﻿<Window x:Class="Lab11.App.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab11.App"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
+    <Grid>
+        <Button x:Name="b_addInvoiceWindowShow" Content="Add invoice" HorizontalAlignment="Left" Margin="29,63,0,0" VerticalAlignment="Top" Width="150" Height="50" RenderTransformOrigin="0.152,1.332" Click="B_addInvoiceWindowShow_Click" />
+        <Button x:Name="b_removeInvoice" Content="Remove invoice" HorizontalAlignment="Left" Margin="184,63,0,0" VerticalAlignment="Top" Width="150" Height="50" Click="B_removeInvoice_Click" />
+        <DockPanel Height="259" LastChildFill="False" Margin="10,0,-0.4,0" VerticalAlignment="Bottom">
+            <DataGrid x:Name="dg_Invoices"  DockPanel.Dock="Bottom" Height="248" VerticalAlignment="Top" Margin="10,0,9,0" SelectionMode="Single"/>
+        </DockPanel>
+        <Button x:Name="b_addInvoiceItemWindowShow" Content="Add invoice item" HorizontalAlignment="Left" Margin="339,63,0,0" VerticalAlignment="Top" Width="150" Height="50" RenderTransformOrigin="0.152,1.332" Click="B_addInvoiceItemWindowShow_Click" />
+        <ComboBox x:Name="cb_filterbyProperties" HorizontalAlignment="Left" Margin="87,130,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="filter by:&#xD;&#xA;" HorizontalAlignment="Left" Margin="29,130,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tb_filterValue" HorizontalAlignment="Left" Height="23" Margin="245,129,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="Tb_filterValue_TextChanged" />
+    </Grid>
+</Window>

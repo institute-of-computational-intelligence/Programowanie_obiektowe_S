@@ -1,0 +1,17 @@
+﻿<Window x:Class="Lab11.App.AddInvoiceWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab11.App"
+        mc:Ignorable="d"
+        Title="AddInvoiceWindow" Height="200.4" Width="286.4">
+    <Grid>
+        <Button x:Name="B_addInvoice" Content="Add Invoice" HorizontalAlignment="Left" Margin="85,116,0,0" VerticalAlignment="Top" Width="75" Click="B_addInvoice_Click"/>
+        <Label Content="Customer" HorizontalAlignment="Left" Margin="30,30,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tb_Customer" HorizontalAlignment="Left" Height="23" Margin="104,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Address" HorizontalAlignment="Left" Margin="30,70,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tb_Address" HorizontalAlignment="Left" Height="23" Margin="104,73,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+
+    </Grid>
+</Window>
