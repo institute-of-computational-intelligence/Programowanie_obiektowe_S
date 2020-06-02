@@ -1,0 +1,34 @@
+﻿<Window x:Class="Lab11.InvoiceWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab11"
+        mc:Ignorable="d"
+        Title="InvoiceWindow" Height="562.636" Width="681.713">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <DataGrid x:Name="dgItems" HorizontalAlignment="Left" Height="146" VerticalAlignment="Top" Width="654" Margin="10,308,0,0"/>
+        <Label Content="Data" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" Width="127" FontSize="20" Height="43" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" RenderTransformOrigin="1.017,1.673"/>
+        <TextBox x:Name="dateBox" HorizontalAlignment="Left" Height="39" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="207" Margin="172,10,0,0" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Label Content="Klient" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,72,0,0" Width="127" FontSize="20" Height="43" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" RenderTransformOrigin="1.017,1.673"/>
+        <TextBox x:Name="customerBox" HorizontalAlignment="Left" Height="39" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="207" Margin="172,76,0,0" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Label Content="Adres" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,137,0,0" Width="127" FontSize="20" Height="44" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" RenderTransformOrigin="1.017,1.673"/>
+        <TextBox x:Name="addressBox" HorizontalAlignment="Left" Height="39" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="207" Margin="172,137,0,0" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Label Content="Wartość" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,202,0,0" Width="127" FontSize="20" Height="44" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" RenderTransformOrigin="1.017,1.673"/>
+        <TextBox x:Name="valueBox" HorizontalAlignment="Left" Height="39" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="207" Margin="172,202,0,0" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Label Content="Przedmiot" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="470,10,0,0" Width="128" FontSize="20" Height="43" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" RenderTransformOrigin="1.017,1.673"/>
+        <TextBox x:Name="itemBox" HorizontalAlignment="Left" Height="39" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="208" Margin="440,58,0,0" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Label Content="Ilość" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="470,107,0,0" Width="128" FontSize="20" Height="43" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" RenderTransformOrigin="1.017,1.673"/>
+        <TextBox x:Name="amountItemBox" HorizontalAlignment="Left" Height="39" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="208" Margin="440,155,0,0" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Label Content="Cena" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="470,199,0,0" Width="128" FontSize="20" Height="43" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" RenderTransformOrigin="1.017,1.673"/>
+        <TextBox x:Name="itemPriceBox" HorizontalAlignment="Left" Height="39" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="208" Margin="440,247,0,0" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Button Content="Dodaj" HorizontalAlignment="Left" VerticalAlignment="Top" Width="174" Margin="10,477,0,0" Height="45" Click="AddButton_Click" FontSize="20"/>
+        <Button Content="Usun" HorizontalAlignment="Left" VerticalAlignment="Top" Width="174" Margin="252,477,0,0" Height="45" Click="RemoveButton_Click_1" FontSize="20"/>
+        <Button Content="Zapisz" HorizontalAlignment="Left" VerticalAlignment="Top" Width="174" Margin="490,477,0,0" Height="45" Click="SaveButton_Click_2" FontSize="20"/>
+
+    </Grid>
+</Window>
