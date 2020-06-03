@@ -7,11 +7,17 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button x:Name="AddStudentButton" Content="AddStudent" HorizontalAlignment="Left" Margin="38,28,0,0" VerticalAlignment="Top" Width="111" Height="29" Click="AddStudentButton_Click"/>
-        <Button x:Name="RemoveStudentButton" Content="RemoveStudent" HorizontalAlignment="Left" Margin="177,28,0,0" VerticalAlignment="Top" Width="111" Height="29" Click="RemoveStudentButton_Click" />
+        <Button x:Name="AddStudentButton" Content="AddStudent" HorizontalAlignment="Left" Margin="39,10,0,0" VerticalAlignment="Top" Width="111" Height="29" Click="AddStudentButton_Click"/>
+        <Button x:Name="RemoveStudentButton" Content="RemoveStudent" HorizontalAlignment="Left" Margin="39,44,0,0" VerticalAlignment="Top" Width="111" Height="29" Click="RemoveStudentButton_Click" />
         <DataGrid x:Name="dg" HorizontalAlignment="Left" Height="321" Margin="10,88,0,0" VerticalAlignment="Top" Width="772" AutoGenerateColumns="False" SelectionChanged="dg_SelectionChanged" SelectionMode="Single" CanUserDeleteRows="False" />
-        <Button x:Name="ShowGradesButton" Content="ShowGrades" HorizontalAlignment="Left" Margin="318,28,0,0" VerticalAlignment="Top" Width="111" Height="29" Click="ShowGradesButton_Click" />
-        <Button x:Name="AddGradeButton" Content="AddGrade" HorizontalAlignment="Left" Margin="460,28,0,0" VerticalAlignment="Top" Width="111" Height="29" Click="AddGradeButton_Click"/>
+        <Button x:Name="ShowGradesButton" Content="ShowGrades" HorizontalAlignment="Left" Margin="211,10,0,0" VerticalAlignment="Top" Width="111" Height="29" Click="ShowGradesButton_Click" />
+        <Button x:Name="AddGradeButton" Content="AddGrade" HorizontalAlignment="Left" Margin="211,44,0,0" VerticalAlignment="Top" Width="111" Height="29" Click="AddGradeButton_Click"/>
+        <Button Content="SaveToFile" x:Name="SaveToFileButton" HorizontalAlignment="Left" Margin="379,10,0,0" VerticalAlignment="Top" Width="69" Height="29" Click="SaveToFile_Click"/>
+        <Button Content="LoadFromFile" x:Name="LoadFromFileButton" HorizontalAlignment="Left" Margin="379,44,0,0" VerticalAlignment="Top" Width="69" Height="29" Click="LoadFromFile_Click"/>
+        <Button Content="Save (ser)" x:Name="SaveToFileSerButton" HorizontalAlignment="Left" Margin="453,10,0,0" VerticalAlignment="Top" Width="69" Height="29" Click="SaveToFileSer_Click"/>
+        <Button Content="Load (ser)" x:Name="LoadFromFileSerButton" HorizontalAlignment="Left" Margin="453,44,0,0" VerticalAlignment="Top" Width="69" Height="29" Click="LoadFromFileSer_Click"/>
+        <Button Content="SaveToXml" x:Name="SaveToXmlButton" HorizontalAlignment="Left" Margin="593,10,0,0" VerticalAlignment="Top" Width="100" Height="29" Click="SaveToXml_Click"/>
+        <Button Content="LoadFromXml" x:Name="LoadFromXmlButton" HorizontalAlignment="Left" Margin="593,44,0,0" VerticalAlignment="Top" Width="100" Click="LoadFromXml_Click" Height="29"/>
 
     </Grid>
 </Window>
