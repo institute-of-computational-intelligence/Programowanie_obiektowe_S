@@ -1,0 +1,15 @@
+﻿<Window x:Class="lab8.GradesWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lab8"
+        mc:Ignorable="d"
+        Title="GradesWindow" Height="450" Width="800">
+    <Grid>
+        <DataGrid HorizontalAlignment="Left" Height="300" Margin="50,90,0,0" VerticalAlignment="Top" Width="700" Name="t"/>
+        <Button Content="AddGrades" Name="AddGrades" HorizontalAlignment="Left" Margin="634,52,0,0" VerticalAlignment="Top" Width="75" Click="AddGrades_Click"/>
+
+
+    </Grid>
+</Window>
