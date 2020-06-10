@@ -8,8 +8,8 @@ using System.Threading.Tasks;
 using AutoMapper;//trzeba doinstalowac
 using Lab12.Server.DAL;
 using Lab12.Server.Model.Entities;
-using Lab12.Utilities.Utils;
-using Lab12.Utilities.VMs;
+using Lab12.Server.Utilities.Utils;
+using Lab12.Server.Utilities.VMs;
 using NHibernate;
 using NHibernate.Transform;
 
@@ -63,7 +63,26 @@ namespace Lab12.Server
                     Task.Run(() => {
                         IPEndPoint clientEndPoint = (IPEndPoint)client.RemoteEndPoint;
                         Console.WriteLine($"Connected with {clientEndPoint.Address} at port {clientEndPoint.Port}");
-                        //TODO: DOKONCZ
+                        using (var session = SessionFactory.OpenSession())
+                        {
+                            var messages = session
+                                .QueryOver<Message>()
+                                .JoinQueryOver(m => m.Attachments)
+                                .TransformUsing(Transformers.DistinctRootEntity)
+                                .List();
+                            var messageVms = mapper.Map<IList<MessageVm>>(messages);
+                            Console.WriteLine("Transmitting data...");
+                            var messagesBytes = messageVms.Serialize();
+                            client.Send(messagesBytes, messagesBytes.Length, SocketFlags.None);
+                            var fileBytes = File.ReadAllBytes("./Attachments/Attachment1.bin");
+                            client.Send(fileBytes, fileBytes.Length, SocketFlags.None);
+                            fileBytes = File.ReadAllBytes("./Attachments/Attachment1.bin");
+                            client.Send(fileBytes, fileBytes.Length, SocketFlags.None);
+                        }
+                        Console.WriteLine("Transmission done.");
+                        Console.WriteLine("Disconnected from {0}", clientEndPoint.Address);
+                        client.Shutdown(SocketShutdown.Both);
+                        client.Close();
                     });
                 }
             }

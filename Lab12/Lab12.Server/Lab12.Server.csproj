@@ -117,6 +117,14 @@
       <Project>{90304559-1171-4191-b1d6-ca80ac606eb1}</Project>
       <Name>Lab12.Server.DAL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Lab12.Server.Model\Lab12.Server.Model.csproj">
+      <Project>{ba5509a2-860b-4880-bb9e-0ffc0a23c1b3}</Project>
+      <Name>Lab12.Server.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Lab12.Server.Utilities\Lab12.Server.Utilities.csproj">
+      <Project>{71b6b28d-6393-479e-a943-80bde5c6fcf6}</Project>
+      <Name>Lab12.Server.Utilities</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

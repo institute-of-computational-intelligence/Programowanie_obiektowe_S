@@ -7,6 +7,11 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Button Content="Connect &amp; Download" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="162" Click="Button_Click"/>
+        <DataGrid x:Name="messagesDG" HorizontalAlignment="Left" Height="159" Margin="10,66,0,0" VerticalAlignment="Top" Width="772" SelectionChanged="messagesDG_SelectionChanged"/>
+        <DataGrid x:Name="attachmentsDG" HorizontalAlignment="Left" Height="148" Margin="10,261,0,0" VerticalAlignment="Top" Width="772"/>
+        <Label Content="Messages" HorizontalAlignment="Left" Margin="10,35,0,0" VerticalAlignment="Top"/>
+        <Label Content="Attachments" HorizontalAlignment="Left" Margin="10,230,0,0" VerticalAlignment="Top"/>
+
     </Grid>
 </Window>

@@ -116,5 +116,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Lab12.Server.Utilities\Lab12.Server.Utilities.csproj">
+      <Project>{71B6B28D-6393-479E-A943-80BDE5C6FCF6}</Project>
+      <Name>Lab12.Server.Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,6 +1,13 @@
-﻿using System;
+﻿using Lab12.Server.Utilities.Attributes;
+using Lab12.Server.Utilities.Utils;
+using Lab12.Server.Utilities.VMs;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Net;
+using System.Net.Sockets;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -20,9 +27,81 @@ namespace Lab12.Client
     /// </summary>
     public partial class MainWindow : Window
     {
+        private List<MessageVm> messages;
+
         public MainWindow()
         {
             InitializeComponent();
+            messages = new List<MessageVm>();
+        }
+
+        private static void SetGrid<T>(IList<T> list, DataGrid dataGrid) where T: new()
+        {
+            dataGrid.Columns.Clear();
+            Type type = typeof(T);
+            foreach (var prop in type.GetProperties())
+            {
+                if (prop.GetCustomAttribute<HideAttribute>() == null)
+                {
+                    dataGrid.Columns.Add(new DataGridTextColumn() { Header = prop.Name, Binding = new Binding(prop.Name) });
+                }
+            }
+            dataGrid.AutoGenerateColumns = false;
+            dataGrid.ItemsSource = list;
+            dataGrid.Items.Refresh();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            ConnectAndDownload();
+
+        }
+
+        
+
+        private void ConnectAndDownload()
+        {
+
+            try
+            {
+                IPEndPoint ip = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 9999);
+                Socket server = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+                try
+                {
+                    server.Connect(ip);
+                    messages.Clear();
+                }
+                catch (SocketException)
+                {
+                    MessageBox.Show("Unable to connect to server.");
+                    return;
+                }
+                var data = new byte[1024 * 1024];
+                server.Receive(data);
+                messages = data.Deserialize<List<MessageVm>>().ToList();
+                var fileBytes = new byte[1024 * 1024];
+                server.Receive(fileBytes);
+                File.WriteAllBytes(@"./attachment1.bin", fileBytes);
+                fileBytes = new byte[1024 * 1024 * 10];
+                server.Receive(fileBytes);
+                File.WriteAllBytes(@"./attachment2.bin", fileBytes);
+                SetGrid(messages, messagesDG);
+                server.Shutdown(SocketShutdown.Both);
+                server.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+                
+            }
+        }
+
+        private void messagesDG_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (messagesDG.SelectedItem != null && messagesDG.SelectedItem is MessageVm message)
+            {
+                SetGrid(message.Attachments, attachmentsDG);
+            }
         }
     }
 }
