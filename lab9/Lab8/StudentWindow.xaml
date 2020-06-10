@@ -1,0 +1,25 @@
+﻿<Window x:Name="StudentEdit" x:Class="Lab8.StudentWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab8"
+        mc:Ignorable="d"
+        Title="StudentWindow" Height="296.643" Width="409.328">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="355*"/>
+            <ColumnDefinition Width="46*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="imie_textBox" HorizontalAlignment="Left" Height="30" Margin="172,45,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="nazwisko_textBox" HorizontalAlignment="Left" Height="30" Margin="172,89,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="nr_indeksu_textBox" HorizontalAlignment="Left" Height="30" Margin="172,136,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="kierunek_textBox" HorizontalAlignment="Left" Height="30" Margin="172,180,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="imie_textBlock" HorizontalAlignment="Left" Height="30" Margin="31,45,0,0" TextWrapping="Wrap" Text="Imie" VerticalAlignment="Top" Width="125" FontSize="16" TextAlignment="Right"/>
+        <TextBlock x:Name="nazwisko_textBlock" HorizontalAlignment="Left" Height="30" Margin="31,89,0,0" TextWrapping="Wrap" Text="Nazwisko" VerticalAlignment="Top" Width="125" FontSize="16" TextAlignment="Right"/>
+        <TextBlock x:Name="nr_indeksu_textBlock" HorizontalAlignment="Left" Height="30" Margin="31,136,0,0" TextWrapping="Wrap" Text="Nr Indeksu" VerticalAlignment="Top" Width="125" TextAlignment="Right" FontSize="16"/>
+        <TextBlock x:Name="kierunek_textBlock" HorizontalAlignment="Left" Height="30" Margin="31,180,0,0" TextWrapping="Wrap" Text="Kierunek" VerticalAlignment="Top" Width="125" FontSize="16" TextAlignment="Right"/>
+        <Button x:Name="ok_button" Content="OK" HorizontalAlignment="Left" Height="37" Margin="225,224,0,0" VerticalAlignment="Top" Width="147" Grid.ColumnSpan="2" Click="ok_button_Click"/>
+
+    </Grid>
+</Window>

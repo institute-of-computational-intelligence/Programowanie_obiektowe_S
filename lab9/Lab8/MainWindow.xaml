@@ -1,0 +1,20 @@
+﻿<Window x:Class="Lab8.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab8"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Button x:Name="AddStudent" Content="AddStudent" HorizontalAlignment="Left" Height="40" Margin="27,32,0,0" VerticalAlignment="Top" Width="150" AutomationProperties.Name="AddStudent" Click="AddStudent_Click"/>
+        <Button x:Name="RemoveStudent" Content="RemoveStudent" HorizontalAlignment="Left" Height="40" Margin="208,32,0,0" VerticalAlignment="Top" Width="150" AutomationProperties.Name="RemoveStudent" Click="RemoveStudent_Click"/>
+        <DataGrid x:Name="dg" HorizontalAlignment="Left" Height="265" Margin="27,92,0,0" VerticalAlignment="Top" Width="730"/>
+        <Button x:Name="ShowNotes" Content="ShowNotes" HorizontalAlignment="Left" Height="40" Margin="396,32,0,0" VerticalAlignment="Top" Width="150" Click="ShowNotes_Click"/>
+        <Button x:Name="AddNotes" Content="AddNotes" HorizontalAlignment="Left" Height="40" Margin="584,32,0,0" VerticalAlignment="Top" Width="150" Click="AddNotes_Click"/>
+        <Button x:Name="SaveButton" Content="SaveToFile" HorizontalAlignment="Left" Height="36" Margin="53,373,0,0" VerticalAlignment="Top" Width="150" Click="SaveButton_Click" />
+        <Button x:Name="LoadButton" Content="LoadFromFile" HorizontalAlignment="Left" Height="36" Margin="223,373,0,0" VerticalAlignment="Top" Width="150" Click="LoadButton_Click" />
+        <Button x:Name="XmlSaveButton" Content="SaveToXml" HorizontalAlignment="Left" Height="36" Margin="396,373,0,0" VerticalAlignment="Top" Width="150" Click="XmlSaveButton_Click"/>
+        <Button x:Name="XmlLoadButton" Content="LoadFromXml" HorizontalAlignment="Left" Height="36" Margin="566,373,0,0" VerticalAlignment="Top" Width="150" Click="XmlLoadButton_Click"/>
+    </Grid>
+</Window>
