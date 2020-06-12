@@ -12,6 +12,13 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Lab12.Server.Utilities.VMs;
+using Lab12.Server.Utilities.Attributes;
+using Lab12.Server.Utilities.Utils;
+using System.IO;
+using System.Net;
+using System.Net.Sockets;
+using System.Reflection;
 
 namespace Lab12.Client
 {
@@ -20,9 +27,74 @@ namespace Lab12.Client
     /// </summary>
     public partial class MainWindow : Window
     {
+        private List<MessageVm> _messages;
+
         public MainWindow()
         {
             InitializeComponent();
+            _messages = new List<MessageVm>();
+        }
+
+        private static void SetGrid<T>(IList<T> list, DataGrid dataGrid) where T : new()
+        {
+            dataGrid.Columns.Clear();
+            Type type = typeof(T);
+            foreach(var prop in type.GetProperties())
+            {
+                if (prop.GetCustomAttributes<HideAttributes>() == null)
+                    dataGrid.Columns.Add(new DataGridTextColumn() { Header = prop.Name, Binding = new Binding(prop.Name) });
+            }
+            dataGrid.AutoGenerateColumns = false;
+            dataGrid.ItemsSource = list;
+            dataGrid.Items.Refresh();
+        }
+
+        private void Button_Connect_Download_Click(object sender, RoutedEventArgs e)
+        {
+            ConnectAndDownload();
+        }
+
+        private void DataGrid_Messages_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if(DataGrid_Messages.SelectedItem != null && DataGrid_Messages.SelectedItem is MessageVm message)
+            {
+                SetGrid(message.Attachments, DataGrid_Attachments);
+            }
+        }
+
+        private void ConnectAndDownload()
+        {
+            try
+            {
+                IPEndPoint ip = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 9999);
+                Socket server = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+                try
+                {
+                    server.Connect(ip);
+                    _messages.Clear();
+                }
+                catch(SocketException)
+                {
+                    MessageBox.Show("Unable to connect to server.");
+                    return;
+                }
+                var data = new byte[1024 * 1024];
+                server.Receive(data);
+                _messages = data.Deserialize<List<MessageVm>>().ToList();
+                var fileBytes = new byte[1024 * 1024];
+                server.Receive(fileBytes);
+                File.WriteAllBytes(@"./attachment1.bin", fileBytes);
+                fileBytes = new byte[1024 * 1024 * 10];
+                server.Receive(fileBytes);
+                File.WriteAllBytes(@"./attachment2.bin", fileBytes);
+                SetGrid(_messages, DataGrid_Messages);
+                server.Shutdown(SocketShutdown.Both);
+                server.Close();
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
         }
     }
 }

@@ -13,8 +13,7 @@ namespace Lab12.Server.Utilities.VMs
         public int Id { get; set; }
         public string Ttile { get; set; }
         public string Text { get; set; }
-
-        [Hide]
+        [HideAttributes]
         public IList<AttachmentVm> Attachments { get; set; }
 
         public MessageVm()

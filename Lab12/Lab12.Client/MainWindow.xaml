@@ -5,8 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Lab12.Client"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="556.635" Width="1054.858">
     <Grid>
-        
+        <Button x:Name="Button_Connect_Download" Content="Connect &amp; Download" HorizontalAlignment="Left" Margin="25,25,0,0" VerticalAlignment="Top" Width="150" Height="25" Click="Button_Connect_Download_Click"/>
+        <DataGrid x:Name="DataGrid_Messages" HorizontalAlignment="Left" Height="200" VerticalAlignment="Top" Width="999" Margin="25,81,0,0" SelectionChanged="DataGrid_Messages_SelectionChanged"/>
+        <DataGrid x:Name="DataGrid_Attachments" HorizontalAlignment="Left" Height="200" Margin="25,317,0,0" VerticalAlignment="Top" Width="999"/>
+        <Label Content="Attachments" HorizontalAlignment="Left" Margin="25,291,0,0" VerticalAlignment="Top"/>
+        <Label Content="Messages" HorizontalAlignment="Left" Margin="25,55,0,0" VerticalAlignment="Top"/>
+
     </Grid>
 </Window>

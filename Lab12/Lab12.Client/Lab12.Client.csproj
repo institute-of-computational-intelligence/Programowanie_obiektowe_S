@@ -116,5 +116,23 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Lab12.Server.DAL\Lab12.Server.DAL.csproj">
+      <Project>{397d931a-8af8-40e6-a7c1-47f811359dc7}</Project>
+      <Name>Lab12.Server.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Lab12.Server.Model\Lab12.Server.Model.csproj">
+      <Project>{5788f2b9-fd46-403f-ae62-d60cc862e9ed}</Project>
+      <Name>Lab12.Server.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Lab12.Server.Utilities\Lab12.Server.Utilities.csproj">
+      <Project>{e61c6e94-ccec-4c0d-a4b5-c3f7e04935bc}</Project>
+      <Name>Lab12.Server.Utilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Lab12.Server\Lab12.Server.csproj">
+      <Project>{4d14b1a2-01f5-439b-9050-bc007d5c9379}</Project>
+      <Name>Lab12.Server</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
